@@ -12,13 +12,19 @@
 
 	}
 	
-	.logo-icon {
-		height: 34px;
-		width: auto;
-	}
+	// .logo-icon {
+	// 	color: white;
+	// 	height: 2px;
+	// 	width: auto;
+	// 	font-size: 0.2rem;
+	// 	align-content: flex-start;
+	// }
 
 }
-
+.center{
+	margin-left: 0%;
+	 
+}
 
 .header-shrink {	
 	@include box-shadow(0 1px 4px 0 rgba(0,0,0,.1));
@@ -69,6 +75,10 @@
 	
 }
 
+.hero-block-container {
+	background-color: #fff;
+}
+
 .hero-block-mask {
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
@@ -85,6 +95,7 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
+	
 	.carousel-inner {
 		height: 100%;
 	}
@@ -96,9 +107,9 @@
 	.carousel-item-1 {
 		background: url('../images/hero-1.jpg') no-repeat center center;
 	}
-	.carousel-item-2 {
-		background: url('../images/hero-2.jpg') no-repeat center center;
-	}
+	// .carousel-item-2 {
+	// 	background: url('../images/hero-2.jpg') no-repeat center center;
+	// }
 	.carousel-item-3 {
 		background: url('../images/hero-3.jpg') no-repeat center center;
 	}
@@ -113,6 +124,9 @@
 		color: #fff;
 		font-size: 4rem;
 		font-weight: 800;
+	}
+	h3.hero-heading {
+		color: #fff;
 	}
 	.hero-intro {
 		font-size: 1.75rem;
@@ -135,6 +149,13 @@
 	.number {
 		font-size: 2.5rem;
 		font-weight: 700;
+		font-family: 'Montserrat', sans-serif;
+		
+	}
+
+	.numberr {
+		font-size: 1.9rem;
+		font-weight: 00;
 		font-family: 'Montserrat', sans-serif;
 		
 	}
