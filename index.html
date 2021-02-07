@@ -3,8 +3,161 @@
 <head>
 
 	<style>
+
+	*{box-sizing: border-box;}
+	body {font-family: Verdana, sans-serif;}
+	.mySlides {display: none;}
+	img {vertical-align: left;
+	}
+
+	/* Slideshow container */
+	.slideshow-container {
+	max-width: 300px;
+	position: relative;
+	margin: auto;
+	}
+
+	/* Caption text */
+	.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+	}
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+	color: #414040;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	}
+
+	/* .active {
+	background-color: #717171;
+	} */
+
+	/* Fading animation */
+	.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+	}
+
+	@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+	}
+
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+	.text {font-size: 11px}
+	}
+
+		.contact-us{
+			text-align: center;
+		}
+
+		.section-header {
+		margin-bottom: 60px;
+		position: relative;
+		padding-bottom: 20px;
+		}
+
+		.section-header::before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 60px;
+		height: 5px;
+		background: #f82249;
+		bottom: 0;
+		left: calc(50% - 25px);
+		}
+
+		.section-header h2 {
+		font-size: 36px;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 700;
+		margin-bottom: 10px;
+		}
+
+		.section-header p {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		font-size: 18px;
+		font-weight: 500;
+		color: #9195a2;
+		}
+
+		.section-with-bg {
+		background-color: #f6f7fd;
+		}
 		
-		
+		#gallery {
+		padding: 60px;
+		overflow: hidden;
+		}
+
+		#gallery .owl-nav, #gallery .owl-dots {
+		margin-top: 25px;
+		text-align: center;
+		}
+
+		#gallery .owl-item {
+		border-left: 2px solid #fff;
+		border-right: 2px solid #fff;
+		}
+
+		#gallery .owl-dot {
+		display: inline-block;
+		margin: 0 5px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: #ddd;
+		}
+
+		#gallery .owl-dot.active {
+		background-color: #f82249;
+		}
+
+		#gallery .gallery-carousel .owl-stage-outer {
+		overflow: visible;
+		}
+
+		#gallery .gallery-carousel .center {
+		border: 6px solid #f82249;
+		margin: -10px;
+		box-sizing: content-box;
+		padding: 4px;
+		background: #fff;
+		z-index: 1;
+		}
+				
 		input[type=text], select, textarea {
 		  width: 100%;
 		  padding: 12px;
@@ -53,6 +206,17 @@
 		  margin-bottom: 5%;
 		}
 
+/* 
+		#owl-demo .item{
+			margin: 3px;
+		}
+		#owl-demo .item img{
+			display: block;
+			width: 20%;
+			height: auto;
+		} */
+
+
 		#about-conference:hover
 		{ box-shadow: 5px 10px 18px #414040;
 		 
@@ -77,6 +241,14 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800|Roboto:300,400,700&display=swap" rel="stylesheet">
 	
+	
+	  <!-- Vendor CSS Files -->
+	  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+	  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+	  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
 	<!-- FontAwesome JS-->
 	<script defer src="assets/fontawesome/js/all.min.js"></script>
 
@@ -202,6 +374,8 @@
 				</div>
 			</div>
 		</div><!--//container-->	
+
+		
 			<div class="container" style="margin-top: 20px;">	
 			<div class="offers text-center bg-white p-4 p-lg-5" id="about-conference">	
 			    <h3 class="section-heading text-center mb-3" >About IGDTUW</h3>
@@ -437,18 +611,18 @@
 		<div class="media-block theme-bg-primary py-5">
 			
 			<div class="container">
-				<h4 class="text-white text-center mb-3">Previously</h4>
-				<div class="section-intro text-center single-col-max mx-auto text-white mb-5">Conference videos and images from previous years is a great way to show people what to expect at the conference and entice them to join. You can host more media content on YouTube, Flickr or Instagram and link out to them in this section.</div>
+				<h4 class="text-white text-center mb-3">Catch us up on Youtube</h4>
+				<div class="section-intro text-center single-col-max mx-auto text-white mb-5">Conference videos and images from previous years is a great way to show people what to expect at the conference and entice them to join.</div>
 				<div class="row">
 					<div class="col-12 col-md-6 mb-3">
 						<div class="embed-responsive embed-responsive-16by9">
 							
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/stjniziaxy4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://youtube.com/embed/alyJeRLX7Pg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div><!--//embed-responsive -->
 					</div><!--//col-->
 					<div class="col-12 col-md-6 mb-md-5">
 						<div class="embed-responsive embed-responsive-16by9">
-							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NPYqnGNO_zw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wE4cZbP2t1I" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div><!--//embed-responsive -->
 					</div><!--//col-->
 				</div><!--//row-->
@@ -659,7 +833,7 @@
 				<div class="tab-pane active" id="tab-1-content" role="tabpanel" aria-labelledby="tab-1">
 					<div class="item item-talk">
 						<div class="meta">
-							<h4 class="time mb-3">25 August, 2021</h4>
+							<h4 class="time mb-3">25 Aug, 2021</h4>
 							<div class="profile">
 								<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a>
 								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a></div>
@@ -673,7 +847,7 @@
 					</div><!--//item-->
 					<div class="item item-talk">
 						<div class="meta">
-							<h4 class="time mb-3">30 September, 2021</h4>
+							<h4 class="time mb-3">30 Sept, 2021</h4>
 							<div class="profile">
 								<a href="#modal-speaker-2" data-toggle="modal" data-target="#modal-speaker-1"></a>
 								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a></div>
@@ -687,7 +861,7 @@
 					</div><!--//item-->
 					<div class="item item-other">
 						<div class="meta">
-							<h4 class="time mb-3">15 October, 2021</h4>
+							<h4 class="time mb-3">15 Oct, 2021</h4>
 						</div><!--//meta-->
 						<div class="content">
 							<h3 class="title mb-3">Submissions of Camera Ready</h3>
@@ -697,7 +871,7 @@
 					</div><!--//item-->
 					<div class="item item-talk">
 						<div class="meta">
-							<h4 class="time mb-3">15 October, 2021</h4>
+							<h4 class="time mb-3">15 Oct, 2021</h4>
 							<div class="profile">
 								<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a>
 								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a></div>
@@ -722,16 +896,17 @@
 							<div class="location mb-3"><i class="fas fa-map-marker-alt mr-2"></i>Online</div>
 							<div class="desc"> </div>
 						</div><!--//content-->
+						</div>
+					</div>
 					
-					
-				</div><!--//tab-1-content-->
+				<!--//tab-1-content-->
 				<div class="tab-pane no-timeline" id="tab-2-content" role="tabpanel" aria-labelledby="tab-2">
 					<h4 class="text-center py-5 text-muted">Event Schedule Coming Soon...</h4>
 				</div><!--//tab-2-content-->
 				
+				<br><br>
 				
-			</div><!--//schedule-tab-content-->
-			<div class="schedule-cta text-center mx-auto"><a href="" class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0" target="_blank">Download Schedule</a><a href="" class="btn btn-secondary btn-lg d-block d-md-inline-block" target="_blank">Author Guidelines</a></div>
+			<div class="schedule-cta text-center mx-auto"><a href="" class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0" target="_blank">Download Schedule</a><a href="" class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0" target="_blank">Author Guidelines</a></div>
 		</div><!--//container-->
 	</section><!--//schedule-section-->
 	
@@ -739,7 +914,7 @@
 	
 	<section id="venue-section" class="venue-section section  theme-bg-primary text-white">
 		<div class="container">
-			<p>  <br> </p>
+			<p>  <br> <br></p>
 			<h1 class="section-heading text-center mb-5 text-white">How To Reach Here</h1>
 			<div class="row py-lg-5">
 				<div class="col-12 col-lg-7 h-100">
@@ -777,17 +952,17 @@
 								</div><!--//grid-item-->
 							</div><!--col-->
 						</div><!--//row-->
-						<h4 class="text-white mb-4 mt-3 mt-lg-5">Facilities &amp; Accommodations</h4>
-						<p>Currently unavailable due to COVID-19 restrictions. </p>
-						<p> <br> <br>  </p>
+						<h4 class="text-white mb-4 mt-3 mt-lg-5">Google Maps  </h4>
+						<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Indira%20Gandhi%20Delhi%20Technical%20University&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://soap2day-to.com">soap2day</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">google maps code generator</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+						<p> </p>
 					</div><!--//desc-->
 				</div><!--//col-->
 				<div class="col-12 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
 					<div class="figures-holder">
 						<div class="figure figure-1"><img class="shadow" src="assets/images/speakers/1.jpg" alt=""></div>
 						<div class="figure figure-2"><img class="shadow" src="assets/images/speakers/2.JPG" alt=""></div>
-						
 						<div class="figure figure-4"><img class="shadow" src="assets/images/speakers/4(2).JPG" alt=""></div>
+						<div class="figure figure-2"><img class="shadow" src="assets/images/speakers/2.JPG" alt=""></div>
 					</div><!--//figures-holder-->
 				</div><!--//col-->
 			</div><!--//row-->
@@ -849,12 +1024,75 @@
 			</div>			
 		</div>
 	</section>
-	
-	
+
+
+	    <!-- ======= Gallery Section ======= -->
+		<br>
+		<h2 style="text-align: center;">AIST 2019-2020 Glimpse Slideshow</h2>
+		<div class="slideshow-container">
+
+		<div class="mySlides fade" style="text-align: left;" >
+		<div class="numbertext">1 / 4</div>
+		<img src="assets/images/gallery/1.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides fade" style="text-align: left;">
+		<div class="numbertext">2 / 4</div>
+		<img src="assets/images/gallery/2.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides fade" style="text-align: left;">
+		<div class="numbertext">3 / 4</div>
+		<img src="assets/images/gallery/3.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides fade" style="text-align: left;">
+			<div class="numbertext">4/ 4</div>
+			<img src="assets/images/gallery/4.jpg" style="width:100%">
+			</div>
+
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+
+		</div>
+
+		<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}    
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		setTimeout(showSlides, 2000); // Change image every 2 seconds
+		}
+		</script>
+
+
+<!-- End Gallery Section -->
+
+
 	<section id="sponsors-section" class="sponsors-section section">
 		<div class="container">
-			<h3 class="section-heading text-center mb-3">Sponsors &amp; Partners</h3>
-			<div class="section-intro text-center single-col-max mx-auto mb-5">Want to become a sponsor? Get in touch lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat magna eu accumsan mattis.</div>
+			<br><hr><br><br>
+			<h3 class="section-heading text-center mb-3">AIST-2021</h3>
+			<div class="section-intro text-center single-col-max mx-auto mb-5"> Associations &amp; Partners</div>
 			<div class="row logos justify-content-center">
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-1.svg" alt=""></div>
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-2.svg" alt=""></div>
@@ -869,14 +1107,14 @@
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-11.svg" alt=""></div>
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-12.svg" alt=""></div>
 			</div><!--//row-->
-			<div class="sponsors-cta text-center pt-5"><a class="btn-primary btn btn-lg" href="#">Become A Sponsor</a></div>
+			<!-- <div class="sponsors-cta text-center pt-5"><a class="btn-primary btn btn-lg" href="#">Become A Sponsor</a></div> -->
 		</div><!--//container-->
 	</section><!--//sponsors-section-->
 
 	<section id="contact">
 	<div class="containerr">
 		<form action="mailto:oshinsaini18092000@gmail.com" method="post" enctype="text/plain">
-
+				<h1 class="contact-us">Contact Us</h1><br>
 	  
 		  <label for="fname">First Name</label>
 		  <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -902,7 +1140,7 @@
 		</form>
 	  </div>
 	</section>
-	  
+	
 
 	<footer class="footer py-5 theme-bg-primary">
 		<div class="container text-center">
@@ -916,18 +1154,24 @@
 			
 			
 			<ul class="footer-links list-inline mx-auto mb-4">
-				<li class="list-inline-item"><a href="#">Code of Conduct</a></li>
+				<!-- 3rd International Conference on Artificial Intelligence and Speech Technology<br><br> -->
+				<li class="list-inline-item"><a href="#contact">Contact Us</a></li>
 				<li class="list-inline-item">|</li>
-				<li class="list-inline-item"><a href="#">Terms</a></li>
+				<li class="list-inline-item"><a href="#register-section">Register</a></li>
 				<li class="list-inline-item">|</li>
-				<li class="list-inline-item mr-0"><a href="#">Privacy</a></li>
+				<li class="list-inline-item mr-0"><a href="#callForPapers">Call For Papers</a></li>
 			</ul><!--//footer-link-->
+			<hr>
 			
-			 <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-			<small class="copyright">Designed by Akansha Saini, Anwesha Roy, and Oshin Saini</small>
+			Copyright © IGDTUW All Rights Reserved<br>
+			<small class="copyright">Designed by Oshin Saini, Akansha Saini, Anwesha Roy</small>
 			
 		</div><!--//container-->	    
 	</footer>
+
+	
+
+
 
 	<!-- Modal Speaker -->
 	<div class="modal modal-speaker modal-speaker-1" id="modal-speaker-1" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
@@ -1193,6 +1437,19 @@
 		</div><!--//modal-dialog-->
 	</div><!--//modal-->
 	
+
+	
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
 	<!-- Javascript -->          
 	<script src="assets/plugins/jquery-3.4.1.min.js"></script>
 	<script src="assets/plugins/popper.min.js"></script>
@@ -1200,6 +1457,7 @@
 	<script src="assets/plugins/back-to-top.js"></script>
 	<script src="assets/plugins/jquery.scrollTo.min.js"></script>
 	<script src="assets/js/main.js"></script>  
+
 
 </body>
 </html> 
