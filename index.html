@@ -1,212 +1,238 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
 
 	<style>
+		* {
+			box-sizing: border-box;
+		}
 
-	*{box-sizing: border-box;}
-	body {font-family: Verdana, sans-serif;}
-	.mySlides {display: none;}
-	img {vertical-align: left;
-	}
+		body {
+			font-family: Verdana, sans-serif;
+		}
 
-	/* Slideshow container */
-	.slideshow-container {
-	max-width: 300px;
-	position: relative;
-	margin: auto;
-	}
+		.mySlides {
+			display: none;
+		}
 
-	/* Caption text */
-	.text {
-	color: #f2f2f2;
-	font-size: 15px;
-	padding: 8px 12px;
-	position: absolute;
-	bottom: 8px;
-	width: 100%;
-	text-align: center;
-	}
+		img {
+			vertical-align: left;
+		}
 
-	/* Number text (1/3 etc) */
-	.numbertext {
-	color: #414040;
-	font-size: 12px;
-	padding: 8px 12px;
-	position: absolute;
-	top: 0;
-	}
+		/* Slideshow container */
+		.slideshow-container {
+			max-width: 300px;
+			position: relative;
+			margin: auto;
+		}
 
-	/* The dots/bullets/indicators */
-	.dot {
-	height: 15px;
-	width: 15px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-	}
+		/* Caption text */
+		.text {
+			color: #f2f2f2;
+			font-size: 15px;
+			padding: 8px 12px;
+			position: absolute;
+			bottom: 8px;
+			width: 100%;
+			text-align: center;
+		}
 
-	/* .active {
+		/* Number text (1/3 etc) */
+		.numbertext {
+			color: #414040;
+			font-size: 12px;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+		}
+
+		/* .active {
 	background-color: #717171;
 	} */
 
-	/* Fading animation */
-	.fade {
-	-webkit-animation-name: fade;
-	-webkit-animation-duration: 1.5s;
-	animation-name: fade;
-	animation-duration: 1.5s;
-	}
+		/* Fading animation */
+		.fade {
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 1.5s;
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
 
-	@-webkit-keyframes fade {
-	from {opacity: .4} 
-	to {opacity: 1}
-	}
+		@-webkit-keyframes fade {
+			from {
+				opacity: .4
+			}
 
-	@keyframes fade {
-	from {opacity: .4} 
-	to {opacity: 1}
-	}
+			to {
+				opacity: 1
+			}
+		}
 
-	/* On smaller screens, decrease text size */
-	@media only screen and (max-width: 300px) {
-	.text {font-size: 11px}
-	}
+		@keyframes fade {
+			from {
+				opacity: .4
+			}
 
-		.contact-us{
+			to {
+				opacity: 1
+			}
+		}
+
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+			.text {
+				font-size: 11px
+			}
+		}
+
+		.contact-us {
 			text-align: center;
 		}
 
 		.section-header {
-		margin-bottom: 60px;
-		position: relative;
-		padding-bottom: 20px;
+			margin-bottom: 60px;
+			position: relative;
+			padding-bottom: 20px;
 		}
 
 		.section-header::before {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 60px;
-		height: 5px;
-		background: #f82249;
-		bottom: 0;
-		left: calc(50% - 25px);
+			content: '';
+			position: absolute;
+			display: block;
+			width: 60px;
+			height: 5px;
+			background: #f82249;
+			bottom: 0;
+			left: calc(50% - 25px);
 		}
 
 		.section-header h2 {
-		font-size: 36px;
-		text-transform: uppercase;
-		text-align: center;
-		font-weight: 700;
-		margin-bottom: 10px;
+			font-size: 36px;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: 700;
+			margin-bottom: 10px;
 		}
 
 		.section-header p {
-		text-align: center;
-		padding: 0;
-		margin: 0;
-		font-size: 18px;
-		font-weight: 500;
-		color: #9195a2;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			font-size: 18px;
+			font-weight: 500;
+			color: #9195a2;
 		}
 
 		.section-with-bg {
-		background-color: #f6f7fd;
-		}
-		
-		#gallery {
-		padding: 60px;
-		overflow: hidden;
+			background-color: #f6f7fd;
 		}
 
-		#gallery .owl-nav, #gallery .owl-dots {
-		margin-top: 25px;
-		text-align: center;
+		#gallery {
+			padding: 60px;
+			overflow: hidden;
+		}
+
+		#gallery .owl-nav,
+		#gallery .owl-dots {
+			margin-top: 25px;
+			text-align: center;
 		}
 
 		#gallery .owl-item {
-		border-left: 2px solid #fff;
-		border-right: 2px solid #fff;
+			border-left: 2px solid #fff;
+			border-right: 2px solid #fff;
 		}
 
 		#gallery .owl-dot {
-		display: inline-block;
-		margin: 0 5px;
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-		background-color: #ddd;
+			display: inline-block;
+			margin: 0 5px;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background-color: #ddd;
 		}
 
 		#gallery .owl-dot.active {
-		background-color: #f82249;
+			background-color: #f82249;
 		}
 
 		#gallery .gallery-carousel .owl-stage-outer {
-		overflow: visible;
+			overflow: visible;
 		}
 
 		#gallery .gallery-carousel .center {
-		border: 6px solid #f82249;
-		margin: -10px;
-		box-sizing: content-box;
-		padding: 4px;
-		background: #fff;
-		z-index: 1;
-		}
-				
-		input[type=text], select, textarea {
-		  width: 100%;
-		  padding: 12px;
-		  border: 1px solid #ccc;
-		  border-radius: 4px;
-		  box-sizing: border-box;
-		  margin-top: 6px;
-		  margin-bottom: 16px;
-		  resize: vertical;
-		}
-		
-		input[type=submit] {
-		  background-color: #098dcf;
-		  color: white;
-		  padding: 12px 20px;
-		  border: none;
-		  border-radius: 4px;
-		  cursor: pointer;
-		  margin-left: 45%;
-		
-		}
-		
-		input[type=submit]:hover {
-		  background-color: #098dcf;
-		}
-		input[type=reset] {
-		  background-color: #098dcf;
-		  color: white;
-		  padding: 12px 20px;
-		  border: none;
-		  border-radius: 4px;
-		  cursor: pointer;
-		}
-		
-		input[type=reset]:hover {
-		  background-color: #098dcf;
-		}
-		
-		.containerr {
-		  border-radius: 5px;
-		  background-color: #f5f5f5;
-		  padding: 40px;
-		  margin-left: 10%;
-		  margin-right: 10%;
-		  margin-top: 5%;
-		  margin-bottom: 5%;
+			border: 6px solid #f82249;
+			margin: -10px;
+			box-sizing: content-box;
+			padding: 4px;
+			background: #fff;
+			z-index: 1;
 		}
 
-/* 
+		input[type=text],
+		select,
+		textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+		}
+
+		input[type=submit] {
+			background-color: #098dcf;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			margin-left: 45%;
+
+		}
+
+		input[type=submit]:hover {
+			background-color: #098dcf;
+		}
+
+		input[type=reset] {
+			background-color: #098dcf;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type=reset]:hover {
+			background-color: #098dcf;
+		}
+
+		.containerr {
+			border-radius: 5px;
+			background-color: #f5f5f5;
+			padding: 40px;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 5%;
+			margin-bottom: 5%;
+		}
+
+		/* 
 		#owl-demo .item{
 			margin: 3px;
 		}
@@ -217,91 +243,108 @@
 		} */
 
 
-		#about-conference:hover
-		{ box-shadow: 5px 10px 18px #414040;
-		 
+		#about-conference:hover {
+			box-shadow: 5px 10px 18px #414040;
+
 		}
-		#regiter-table:hover
-		{ box-shadow: 5px 10px 18px #414040; }
 
-		#callForPapers-paper:hover
-		{ box-shadow: 5px 10px 18px #414040; }
+		#regiter-table:hover {
+			box-shadow: 5px 10px 18px #414040;
+		}
 
-		</style>
+		#callForPapers-paper:hover {
+			box-shadow: 5px 10px 18px #414040;
+		}
+	</style>
 
 	<title>AIST 2021</title>
-	
+
+
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="AIST 2021 Website">
-	<meta name="author" content="Oshin Saini, Anwesha Roy, Akansha Saini">    
-	<link rel="shortcut icon" href="favicon.ico"> 
-	
+	<meta name="author" content="Oshin Saini, Anwesha Roy, Akansha Saini">
+	<link rel="shortcut icon" href="favicon.ico">
+
 	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800|Roboto:300,400,700&display=swap" rel="stylesheet">
-	
-	
-	  <!-- Vendor CSS Files -->
-	  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-	  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-	  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800|Roboto:300,400,700&display=swap"
+		rel="stylesheet">
+
+
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
 	<!-- FontAwesome JS-->
 	<script defer src="assets/fontawesome/js/all.min.js"></script>
 
-	<!-- Theme CSS -->  
+	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-    <style>
-		
-		#regiter-table:hover
-		{ box-shadow: 5px 10px 18px #414040; }
-		#callForPapers-paper:hover
-		{ box-shadow: 5px 10px 18px #414040; }
+	<link rel="stylesheet" href="assets/css/gallerySlide.css">
+
+	<style>
+		#regiter-table:hover {
+			box-shadow: 5px 10px 18px #414040;
+		}
+
+		#callForPapers-paper:hover {
+			box-shadow: 5px 10px 18px #414040;
+		}
 	</style>
 
-</head> 
+</head>
 
-<body>    
-	<header id="header" class="header fixed-top">	    
+<body>
+	<header id="header" class="header fixed-top">
 		<div class="branding">
 			<div class="container-fluid">
 				<nav class="main-nav navbar navbar-expand-lg">
-					<div class="site-logo"><a class="scrollto" href="#hero-block"><img  width="150px" src="assets/images/AIST-2021.svg" alt="logo"></a></div>    
+					<div class="site-logo"><a class="scrollto" href="#hero-block"><img width="150px"
+								src="assets/images/AIST-2021.svg" alt="logo"></a></div>
 					<!-- <div class="navbar-btn order-lg-2"><a class="scrollto" href="#hero-block"><img class="fas fa-award fa-5x" src="assets/images/logo-white.png" alt="logo"></a></div>     -->
 
 					<!-- <div class="navbar-btn order-lg-2"><a class="btn btn-secondary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devconf-free-bootstrap-4-conference-template-for-tech-conferences-and-events/" target="_blank">Tickets</a></div> -->
-					
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+						aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					
+
 					<div id="navigation" class="navbar-collapse collapse  justify-content-lg-end mr-lg-3">
 						<ul class="nav navbar-nav">
-							
-							<li class="nav-item"><a class="nav-link scrollto" href="#about-section" >Home</a></li>                                              							
-							<li class="nav-item"><a class="nav-link scrollto" href="#about-section">About</a></li>     
-							<li class="nav-item"><a class="nav-link scrollto" href="#callForPapers">Call for Papers</a></li>                                         
+
+							<li class="nav-item"><a class="nav-link scrollto" href="#hero-block">Home</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#about-section">About</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#callForPapers">Call for Papers</a>
+							</li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#speakers-section">Speakers</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#schedule-section">Schedule</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#register-section">Committe</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#departments">Committe</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#register-section">Register</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#contact">Contact</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#section">AIST2020</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#">Author Guidelines</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="">Download-Schedule</a></li> 
-						</ul><!--//nav-->
-					</div><!--//navabr-collapse-->
+							<li class="nav-item"><a class="nav-link scrollto" href="">Download-Schedule</a></li>
+						</ul>
+						<!--//nav-->
+					</div>
+					<!--//navabr-collapse-->
 
-				</nav><!--//main-nav-->
-				
-			</div><!--//container-->
-		</div><!--//branding-->
-	</header><!--//header-->
-	
+				</nav>
+				<!--//main-nav-->
+
+			</div>
+			<!--//container-->
+		</div>
+		<!--//branding-->
+	</header>
+	<!--//header-->
+
 	<div id="hero-block" class="hero-block">
 		<div id="hero-carousel" class="hero-carousel carousel slide carousel-fade" data-ride="carousel">
 			<div class="carousel-inner">
@@ -322,14 +365,19 @@
 				<h1 class="hero-heading mb-2">AIST 2021</h1>
 				<!-- <div class="hero-meta mb-3"><i class="far fa-calendar-alt mr-2"></i>12 - 15 Oct <i class="fas fa-map-marker-alt mx-2"></i>New Delhi, India</div> -->
 				<div class="hero-intro mb-4">Artificial Intelligence & Speech Technology <br></div><br>
-				<div class="hero-meta mb-3"><i class="far fa-calendar-alt mr-2"></i>12 - 15 Oct <i class="fas fa-map-marker-alt mx-2"></i>New Delhi, India</div>
-				<div class="hero-cta"><a class="btn btn-primary btn-lg" href="" target="_blank">Submit your Paper</a></div>
-				
-			</div><!--//hero-text-block-->
-		</div><!--//container-->
+				<div class="hero-meta mb-3"><i class="far fa-calendar-alt mr-2"></i>12 - 15 Oct <i
+						class="fas fa-map-marker-alt mx-2"></i>New Delhi, India</div>
+				<div class="hero-cta"><a class="btn btn-primary btn-lg" href="" target="_blank">Submit your Paper</a>
+				</div>
 
-	</div><!--//hero-block-->
-	
+			</div>
+			<!--//hero-text-block-->
+		</div>
+		<!--//container-->
+
+	</div>
+	<!--//hero-block-->
+
 	<div class="stats-block theme-bg-primary text-white py-4 text-center" style="background-color: #fff">
 		<div class="container">
 			<div class="unit">IN ASSOCIATION WITH</div><br>
@@ -339,493 +387,811 @@
 					<div class="item">
 						<div class="number"><img src="assets/images/logos/logo-4.svg" alt=""> </div>
 
-					</div><!--//item-->
-				</div><!--//col-->
+					</div>
+					<!--//item-->
+				</div>
+				<!--//col-->
 				<div class="col-6 col-md-3">
 					<div class="item">
 						<div class="number"><img src="assets/images/logos/logo-1.svg" alt=""> </div>
 						<!-- <div class="unit">Days</div> -->
-					</div><!--//item-->
+					</div>
+					<!--//item-->
 				</div>
 				<div class="col-6 col-md-3">
 					<div class="item">
 						<div class="number"><img src="assets/images/logos/logo-3.svg" alt=""> </div>
 						<!-- <div class="unit">Days</div> -->
-					</div><!--//item-->
-				</div><!--//col-->
+					</div>
+					<!--//item-->
+				</div>
+				<!--//col-->
 				<div class="col-6 col-md-3">
 					<div class="item">
 						<div class="numberr"><img src="assets/images/logos/logo-6.svg" alt=""> </div>
 						<!-- <div class="unit">Talks</div> -->
-					</div><!--//item-->
-				</div><!--//col-->
+					</div>
+					<!--//item-->
+				</div>
+				<!--//col-->
 				<!--//col-->
 			</div>
-		</div><!--//container-->  <!--- style="onhover : box-shadow: 5px 10px 18px#414040;-->
-	</div><!--//stats-block-->
+		</div>
+		<!--//container-->
+	</div>
+	<!--//stats-block-->
 
-	<section id="about-section" class="about-section section theme-bg-light"><!--onmouseover="this.style.-->
-		      
-		<br/>
-				<h3 class="section-heading text-center mb-3 " >About The Conference</h3>
-				<div class="container">
-				<div  style="text-align: justify;">After the grand success of two versions of International Conference on Artificial Intelligence and Speech Technology (AIST2019 and AIST2020), Indira Gandhi Delhi Technical University for Women, Delhi is all set to ready for hosting its third version i.e. 3rd International Conference on Artificial Intelligence and Speech Technology (AIST2021) on 12-13th November, 2021 at IGDTUW Campus, Delhi. Last two Conferences witnessed a number of Expert Researchers, Academicians and Industry Practioners in AI and Speech Domain from premier Institutions in India and abroad including Japan, Hungary, Czech Republic, Myanmar, Uzbekistan, Austria, Vietnam and others.
-					<br/><br/>Thanks to Artificial Intelligence (AI), Machine Learning(ML), Natural Language Processing (NLP) and Speech Technology, which are enabling the development of Virtual Assistants in user-facing applications and working in the background to automate workflows. AI driven solutions like speech recognition systems are more accurate and efficient and makes it easier to identify and understand the components of natural language. These models can be used for voice recognition services, making an NLP service well-rounded and more efficient for various domain including medical (e.g. speech impaired people), forensics and academics and others. 
-					<br/><br/>Conference will involve Paper presentations, Tutorials and Key Note Speeches by Eminent Personalities on these technologies. 
-				</div>
-				</div>
-				<br/><br/>	
-			    <h3 class="section-heading text-center mb-3" >About IGDTUW</h3>
-				<div class="container">
-			    <div  style="text-align: justify;"><img src="assets/images/igdtuw pic.png" style=" margin:auto; display: block;" width="1090px" height="100%" /><a href="http://www.igdtuw.ac.in/"><br/> Indira Gandhi Delhi Technical University for Women (IGDTUW)</a>, Delhi was established by Delhi Government in May 2013 vide Delhi State Legislature Act 9,2012 in order to play a major role in the capacity building and imparting high quality technical education to the Women of our country. 
-					<br/><br/>The University offers B. Tech. Programs in (CSE, CSE-AI, IT, ECE and MAE), Dual Degree B.Tech. (MAE)+MBA, B. Arch., M.Tech. in (CSE-AI, IT-ISM, ECE –VLSI and Robotics & Automation), M. Plan (Urban Planning), BBA, MBA, MCA and Ph.D. courses. In last approx. two years, the University has achieved a number of milestones and has been awarded the 2nd fastest growing university by India Today group. University has also achieved ISO 9001:2015 QMS Certification from STQC Certification Services, GOI. University secured 145th rank in 2020 NIRF ranking (in comparison to 162th secured in 2019). 
-					<br/><br/>Retaining and revitalizing the past glory, the highly energetic and dynamic team of students and faculty ensure that the students have an incredibly great platform to prove their skills and merit. Many of our students have been placed in renowned National and Multinational companies like Google, Microsoft, Uber, Intuit, Goldman Sachs, American Express, Walmart, Netapp, Cisco, GE, Nestle, Siemens, Accenture, TCS, DELL, Qualcomm, Mahindra & Mahindra, Maruti, Honda, Bajaj Automobile, MG Motor, Tata Motors, Nestle, Eaton, HUL, Ather Energy, Siemens, Honeywell, Cameron, Fluor Daniel, and others.
-					
-					<br/><br/>University has signed several MoUs with leading industries including NASSCOM Foundation, IBM, Cyberpeace Foundation, Fluor Daniel, EATON and several others for Technical upgradation of students. IGDTUW has also received research and project grants from various Government and Private agencies including of Rs.363 Lakhs from Department of Science and Technology for consolidation of University Research and Excellence and Rs. 820 Lakhs for establishing Centre of Excellence in Artificial Intelligence. Another grant of Rs. 8.5 Crores has been received from DKDF for establishing Centre of Excellence in Mechatronics. University is having strong and active linkage with various Government bodies including DSSSB, MCD, Delhi Police and others for Joint Admission Counseling (JAC) 2020 9 providing consultancy and technical support on emerging areas like Cyber Security, Forensics, Artificial Intelligence and others.
-					</div>
-				</div>
-		   
-			
-			<div class="event-countdown text-center mb-3" style="margin-top: 37px;">		   
-				<h4 class="countdown-intro mb-2 text-center mb-3">Event Starts In:</h4>
-				<div id="countdown-box" class="countdown-box"></div>
-			</div><!--//event-countdown-->
-			<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5" style="background-color: #098dcf;" href="" target="_blank">Register Today</a></div>
-		
+	<section class="about-section section">
 
-		<div class="container" id="callForPapers" >
-			
-				<h3 class=" section-heading text-center mb-3" >Call For Papers</h3>
-				<div class="container" style="text-align: justify;" >Like the previous two versions, 3rd AIST 2021 is dedicated to cutting edge research that addresses scientific needs of academic researchers and industrial professionals to explore new horizons of knowledge related to Artificial Intelligence and Speech Technologies. AIST 2021 is scheduled to include high-quality paper presentation sessions revealing the latest research findings, and to engage participants in interesting discussion sessions. Main focus will be towards novel contributions which could open the new opportunities for providing better and low cost solutions for the betterment of the Society. Use of new AI based approaches line Deep Learning, CNN, RNN, GAN and others in various Speech related issues like speech synthesis, speech recognition etc will be highly appreciated.  We seek novel paper submissions to be presented in AIST 2021 with topics broadly including, but not limited to the following:</div>
-					<div class="container-fluid">
-						<div class="section-intro single-col-max mx-auto mb-4" >
-						<div class="row pricing mb-5" >
-							
+		<br />
+		<h3 class="section-heading text-center mb-3" id="about-section">About The Conference</h3>
+		<div class="container">
+			<div style="text-align: justify;">After the grand success of two versions of International Conference on
+				Artificial Intelligence and Speech Technology (AIST2019 and AIST2020), Indira Gandhi Delhi Technical
+				University for Women, Delhi is all set to ready for hosting its third version i.e. 3rd International
+				Conference on Artificial Intelligence and Speech Technology (AIST2021) on 12-13th November, 2021 at
+				IGDTUW Campus, Delhi. Last two Conferences witnessed a number of Expert Researchers, Academicians and
+				Industry Practioners in AI and Speech Domain from premier Institutions in India and abroad including
+				Japan, Hungary, Czech Republic, Myanmar, Uzbekistan, Austria, Vietnam and others.
+				<br /><br />Thanks to Artificial Intelligence (AI), Machine Learning(ML), Natural Language Processing
+				(NLP) and Speech Technology, which are enabling the development of Virtual Assistants in user-facing
+				applications and working in the background to automate workflows. AI driven solutions like speech
+				recognition systems are more accurate and efficient and makes it easier to identify and understand the
+				components of natural language. These models can be used for voice recognition services, making an NLP
+				service well-rounded and more efficient for various domain including medical (e.g. speech impaired
+				people), forensics and academics and others.
+				<br /><br />Conference will involve Paper presentations, Tutorials and Key Note Speeches by Eminent
+				Personalities on these technologies.
+			</div>
+		</div>
+		<br /><br />
+		<h3 class="section-heading text-center mb-3">About IGDTUW</h3>
+		<div class="container">
+			<div style="text-align: justify;"><img src="assets/images/igdtuw pic.png"
+					style=" margin:auto; display: block;" width="1090px" height="100%" /><a
+					href="http://www.igdtuw.ac.in/"><br /> Indira Gandhi Delhi Technical University for Women
+					(IGDTUW)</a>, Delhi was established by Delhi Government in May 2013 vide Delhi State Legislature Act
+				9,2012 in order to play a major role in the capacity building and imparting high quality technical
+				education to the Women of our country.
+				<br /><br />The University offers B. Tech. Programs in (CSE, CSE-AI, IT, ECE and MAE), Dual Degree
+				B.Tech. (MAE)+MBA, B. Arch., M.Tech. in (CSE-AI, IT-ISM, ECE –VLSI and Robotics & Automation), M. Plan
+				(Urban Planning), BBA, MBA, MCA and Ph.D. courses. In last approx. two years, the University has
+				achieved a number of milestones and has been awarded the 2nd fastest growing university by India Today
+				group. University has also achieved ISO 9001:2015 QMS Certification from STQC Certification Services,
+				GOI. University secured 145th rank in 2020 NIRF ranking (in comparison to 162th secured in 2019).
+				<br /><br />Retaining and revitalizing the past glory, the highly energetic and dynamic team of students
+				and faculty ensure that the students have an incredibly great platform to prove their skills and merit.
+				Many of our students have been placed in renowned National and Multinational companies like Google,
+				Microsoft, Uber, Intuit, Goldman Sachs, American Express, Walmart, Netapp, Cisco, GE, Nestle, Siemens,
+				Accenture, TCS, DELL, Qualcomm, Mahindra & Mahindra, Maruti, Honda, Bajaj Automobile, MG Motor, Tata
+				Motors, Nestle, Eaton, HUL, Ather Energy, Siemens, Honeywell, Cameron, Fluor Daniel, and others.
+
+				<br /><br />University has signed several MoUs with leading industries including NASSCOM Foundation,
+				IBM, Cyberpeace Foundation, Fluor Daniel, EATON and several others for Technical upgradation of
+				students. IGDTUW has also received research and project grants from various Government and Private
+				agencies including of Rs.363 Lakhs from Department of Science and Technology for consolidation of
+				University Research and Excellence and Rs. 820 Lakhs for establishing Centre of Excellence in Artificial
+				Intelligence. Another grant of Rs. 8.5 Crores has been received from DKDF for establishing Centre of
+				Excellence in Mechatronics. University is having strong and active linkage with various Government
+				bodies including DSSSB, MCD, Delhi Police and others for Joint Admission Counseling (JAC) 2020 9
+				providing consultancy and technical support on emerging areas like Cyber Security, Forensics, Artificial
+				Intelligence and others.
+			</div>
+		</div>
+
+
+		<div class="event-countdown text-center mb-3" style="margin-top: 37px;">
+			<h4 class="countdown-intro mb-2 text-center mb-3">Event Starts In:</h4>
+			<div id="countdown-box" class="countdown-box"></div>
+		</div>
+		<!--//event-countdown-->
+		<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5"
+				style="background-color: #098dcf;" href="" target="_blank">Register Today</a></div>
+
+
+		<div class="container" id="callForPapers">
+			<div class="offers text-center bg-white p-4 p-lg-5" id="callForPapers-paper">
+				<h3 class=" section-heading text-center mb-3">Call For Papers</h3>
+				<div class="container-fluid section-intro single-col-max mx-auto mb-4">Like the previous two versions,
+					3rd AIST 2021 is dedicated to cutting edge research that addresses scientific needs of academic
+					researchers and industrial professionals to explore new horizons of knowledge related to Artificial
+					Intelligence and Speech Technologies. AIST 2021 is scheduled to include high-quality paper
+					presentation sessions revealing the latest research findings, and to engage participants in
+					interesting discussion sessions. Main focus will be towards novel contributions which could open the
+					new opportunities for providing better and low cost solutions for the betterment of the Society. Use
+					of new AI based approaches line Deep Learning, CNN, RNN, GAN and others in various Speech related
+					issues like speech synthesis, speech recognition etc will be highly appreciated. We seek novel paper
+					submissions to be presented in AIST 2021 with topics broadly including, but not limited to the
+					following:</div>
+				<div class="container-fluid">
+					<div class="section-intro single-col-max mx-auto mb-4">
+						<div class="row pricing mb-5">
+
 							<div class="col-12 col-md-4 p-2 p-lg-4">
-								<div class="card card-special rounded-0 border-0" style="width:800px;" id="callForPapers-paper">
+								<div class="card card-special rounded-0 border-0" style="width:800px;"
+									id="callForPapers-paper">
 									<div class="card-body p-0">
 										<div class="heading  text-center p-3">
 											<h4 class="text-white mb-0">TRACK 1 : ARTIFICIAL INTELLIGENCE</h4>
 										</div>
 										<div class="info p-3 theme-bg-light">
-											<table  width="100%" style=" table-layout: fixed; ">
-												<tr >
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Foundations of Artificial Intelligence</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Artificial Intelligence tools & Applications</li></td>
-										
+											<table width="100%" style=" table-layout: fixed; ">
+												<tr>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Foundations of
+																Artificial Intelligence</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Artificial
+																Intelligence tools & Applications</li>
+													</td>
+
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Knowledge representation; Knowledge-based Systems</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Intelligent System Architectures</li></td>
-												</tr>
-												<tr >
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Reasoning and Evolution</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Pervasive Computing and Ambient Intelligence</li></td>
-										
-												</tr>
-												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Artificial Intelligence Programming Languages</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Soft Computing and Applications</li></td>
-												</tr>
-												<tr >
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Computational Theories of Learning</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Artificial Neural Network</li></td>
-										
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Knowledge
+																representation; Knowledge-based Systems</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Intelligent
+																System Architectures</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Neuro-informatics</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Cognitive Science</li></td>
-												</tr>
-												<tr >
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Evolutionary Inspired Computing</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Fuzzy Logic and Methods</li></td>
-										
-												</tr>
-												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Genetic Algorithm</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Evolutionary Algorithms</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Reasoning and
+																Evolution</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Pervasive
+																Computing and Ambient Intelligence</li>
+													</td>
+
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Natural Language Processing</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i> Machine Learning</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Artificial
+																Intelligence Programming Languages</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Soft Computing
+																and Applications</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Pattern Recognition</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i> Reinforcement learning</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Computational
+																Theories of Learning</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Artificial
+																Neural Network</li>
+													</td>
+
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Representation learning</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Similarity and metric learning</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i
+																	class="fas fa-check-circle mr-2"></i>Neuro-informatics
+															</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Cognitive
+																Science</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Sparse dictionary learning</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Supervised /Unsupervised learning</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Evolutionary
+																Inspired Computing</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Fuzzy Logic and
+																Methods</li>
+													</td>
+
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Deep Learning</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Convolution Neural Network</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Genetic
+																Algorithm</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Evolutionary
+																Algorithms</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Recurrent Neural Network</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i> Generative Adverse Network</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Natural Language
+																Processing</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i> Machine
+																Learning</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>DNA Computing and Quantum Computing</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Robotics</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Pattern
+																Recognition</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i> Reinforcement
+																learning</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Applications of ML and Deep Learning</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Representation
+																learning</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Similarity and
+																metric learning</li>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Sparse
+																dictionary learning</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Supervised
+																/Unsupervised learning</li>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Deep Learning
+															</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Convolution
+																Neural Network</li>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Recurrent Neural
+																Network</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i> Generative
+																Adverse Network</li>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>DNA Computing
+																and Quantum Computing</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Robotics</li>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Applications of
+																ML and Deep Learning</li>
+													</td>
 													<td></td>
 												</tr>
-											</table>	   	
-									        
-										</div><!--//info-->
-									</div><!--//card-body-->
-									
-								</div><!--//card-->
-							</div><!--//col--> 
+											</table>
+
+										</div>
+										<!--//info-->
+									</div>
+									<!--//card-body-->
+
+								</div>
+								<!--//card-->
+							</div>
+							<!--//col-->
 							<div class="col-12 ">
-								<div class="card card-special  rounded-0 border-0" style="width:800px;" id="callForPapers-paper">
+								<div class="card card-special  rounded-0 border-0" style="width:800px;"
+									id="callForPapers-paper">
 									<div class="card-body p-0">
 										<div class="heading  text-center p-3">
 											<h4 class="text-white mb-0">TRACK 2 : SPEECH TECHNOLOGY</h4>
 										</div>
 										<div class="info p-3 theme-bg-light">
-											<table  width="100%" style=" table-layout: fixed; ">
-												<tr >
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Speech Analysis, Representation and Models</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Spoken Language Recognition and Understanding</li></td>
-										
+											<table width="100%" style=" table-layout: fixed; ">
+												<tr>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Speech Analysis,
+																Representation and Models</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Spoken Language
+																Recognition and Understanding</li>
+													</td>
+
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Speech-to-Speech Translation</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Computer Vision and Speech Recognition</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Speech-to-Speech
+																Translation</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Computer Vision
+																and Speech Recognition</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Text-to-Speech Synthesis</li></td>		
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Affective Speech Recognition, Interpretation and Synthesis</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Text-to-Speech
+																Synthesis</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Affective Speech
+																Recognition, Interpretation and Synthesis</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Speech Enhancement</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Speech and Language Resources – Data Collection, Transcription and Annotation</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Speech
+																Enhancement</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Speech and
+																Language Resources – Data Collection, Transcription and
+																Annotation</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Speech Interface Design and Human Factors Engineering</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Computational Resource Constrained Speech</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Speech Interface
+																Design and Human Factors Engineering</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Computational
+																Resource Constrained Speech</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Spoken Dialogue Systems</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Human Computer Interaction</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Spoken Dialogue
+																Systems</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Human Computer
+																Interaction</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Assistive Technologies</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Forensic Speech Investigations and Security Systems</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Assistive
+																Technologies</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Forensic Speech
+																Investigations and Security Systems</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Multimodal Information Retrieval</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Multivariate Information Analysis</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Multimodal
+																Information Retrieval</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Multivariate
+																Information Analysis</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Applications for Multimodal and Multimedia Processing</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Compressed Sensing (for Speech and/or Image Processing)</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Applications for
+																Multimodal and Multimedia Processing</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Compressed
+																Sensing (for Speech and/or Image Processing)</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Intelligent Robots and Human-Robot Interaction</li></td>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Applications of Modelling, Simulation and Verification in Automotive</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Intelligent
+																Robots and Human-Robot Interaction</li>
+													</td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Applications of
+																Modelling, Simulation and Verification in Automotive
+															</li>
+													</td>
 												</tr>
 												<tr>
-													<td><ul class="list-unstyled text-left d-inline-block">
-														<li><i class="fas fa-check-circle mr-2"></i>Speaker Recognition in Biometric Systems and Security</li></td>
+													<td>
+														<ul class="list-unstyled text-left d-inline-block">
+															<li><i class="fas fa-check-circle mr-2"></i>Speaker
+																Recognition in Biometric Systems and Security</li>
+													</td>
 													<td></td>
 												</tr>
-											</table>	
-										</div><!--//info-->
-									</div><!--//card-body-->
-									
-								</div><!--//card-->
-							</div><!--//col-->
-							
-						</div><!--//pricing-->
+											</table>
+										</div>
+										<!--//info-->
+									</div>
+									<!--//card-body-->
+
+								</div>
+								<!--//card-->
+							</div>
+							<!--//col-->
+
 						</div>
-					</div><!--//container-->
-				
-			</div>	
-		</div><!--//container-->
+						<!--//pricing-->
+					</div>
+				</div>
+				<!--//container-->
+
+			</div>
+		</div>
+		<!--//container-->
 		<!--tickets (Call for Papers)-->
-    
-        
-		
+
+
+
 		<div class="media-block theme-bg-primary py-5">
-			
+
 			<div class="container">
 				<h4 class="text-white text-center mb-3">Catch us up on Youtube</h4>
-				<div class="section-intro text-center single-col-max mx-auto text-white mb-5">Conference videos and images from previous years is a great way to show people what to expect at the conference and entice them to join.</div>
+				<div class="section-intro text-center single-col-max mx-auto text-white mb-5">Conference videos and
+					images from previous years is a great way to show people what to expect at the conference and entice
+					them to join.</div>
 				<div class="row">
 					<div class="col-12 col-md-6 mb-3">
 						<div class="embed-responsive embed-responsive-16by9">
-							
-							<iframe width="560" height="315" src="https://youtube.com/embed/alyJeRLX7Pg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div><!--//embed-responsive -->
-					</div><!--//col-->
+
+							<iframe width="560" height="315" src="https://youtube.com/embed/alyJeRLX7Pg"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+						<!--//embed-responsive -->
+					</div>
+					<!--//col-->
 					<div class="col-12 col-md-6 mb-md-5">
 						<div class="embed-responsive embed-responsive-16by9">
-							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wE4cZbP2t1I" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div><!--//embed-responsive -->
-					</div><!--//col-->
-				</div><!--//row-->
-			</div><!--//container-->
-		</div><!--//media-block-->
-	</section><!--//about-section-->
-	
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wE4cZbP2t1I"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+						<!--//embed-responsive -->
+					</div>
+					<!--//col-->
+				</div>
+				<!--//row-->
+			</div>
+			<!--//container-->
+		</div>
+		<!--//media-block-->
+	</section>
+	<!--//about-section-->
+
 	<section id="speakers-section" class="speakers-section section">
 		<div class="container">
-			<p>  <br> <br>  </p>
+			<p> <br> <br> </p>
 			<h3 class="section-heading text-center mb-3">Speakers</h3>
-			<div class="section-intro text-center single-col-max mx-auto mb-5">Our featured speakers. You can connect with them on social media or send an e-mail.</div>
+			<div class="section-intro text-center single-col-max mx-auto mb-5">Our featured speakers. You can connect
+				with them on social media or send an e-mail.</div>
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"><img src="assets/images/speakers/amita.jpg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"><img
+								src="assets/images/speakers/amita.jpg" class="card-img-top rounded-0" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Dr. Amita Dev</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Vice Chancellor</div>
 								<div class="meta">IGDTUW</div>
-							</div><!--//card-text-->
-							<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1">Read more &rarr;</a>
-						</div><!--//card-->
+							</div>
+							<!--//card-text-->
+							<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1">Read more
+								&rarr;</a>
+						</div>
+						<!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/amita-dev-06a47642?originalSubdomain=in"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list-->
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a
+										href="https://www.linkedin.com/in/amita-dev-06a47642?originalSubdomain=in"><i
+											class="fab fa-linkedin-in fa-fw"></i></a></li>
+
+							</ul>
+							<!--//social-list-->
 						</div>
-					</div><!--//card-->
-				</div><!--//col-->
+					</div>
+					<!--//card-->
+				</div>
+				<!--//col-->
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-2" data-toggle="modal" data-target="#modal-speaker-2"><img src="assets/images/speakers/samudravijay k.jpg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-2" data-toggle="modal" data-target="#modal-speaker-2"><img
+								src="assets/images/speakers/samudravijay k.jpg" class="card-img-top rounded-0"
+								alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Dr. Samudra Vijaya K</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Visiting Faculty </div>
 								<div class="meta">IIT Guwahati</div>
-							</div><!--//card-text-->
-							<a href="#modal-speaker-2" data-toggle="modal" data-target="#modal-speaker-2">Read more &rarr;</a>
-						</div><!--//card-->
+							</div>
+							<!--//card-text-->
+							<a href="#modal-speaker-2" data-toggle="modal" data-target="#modal-speaker-2">Read more
+								&rarr;</a>
+						</div>
+						<!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list-->
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
 						</div>
-					</div><!--//card-->
-				</div><!--//col-->
+					</div>
+					<!--//card-->
+				</div>
+				<!--//col-->
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-3" data-toggle="modal" data-target="#modal-speaker-3"><img src="assets/images/speakers/maxresdefault.jpg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-3" data-toggle="modal" data-target="#modal-speaker-3"><img
+								src="assets/images/speakers/maxresdefault.jpg" class="card-img-top rounded-0"
+								alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Dr. Arun Sharma</h5>
 							<div class="card-text mb-3">
 								<div class="meta"> Dean </div>
 								<div class="meta">IGDTUW</div>
-							</div><!--//card-text-->
-							<a href="#modal-speaker-3" data-toggle="modal" data-target="#modal-speaker-3">Read more &rarr;</a>
-						</div><!--//card-->
+							</div>
+							<!--//card-text-->
+							<a href="#modal-speaker-3" data-toggle="modal" data-target="#modal-speaker-3">Read more
+								&rarr;</a>
+						</div>
+						<!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list-->
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
 						</div>
-					</div><!--//card-->
-				</div><!--//col-->
+					</div>
+					<!--//card-->
+				</div>
+				<!--//col-->
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-4" data-toggle="modal" data-target="#modal-speaker-4"><img src="assets/images/speakers/S Sakti, NAIST Japan.jpg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-4" data-toggle="modal" data-target="#modal-speaker-4"><img
+								src="assets/images/speakers/S Sakti, NAIST Japan.jpg" class="card-img-top rounded-0"
+								alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Dr. S Sakti</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Professor</div>
 								<div class="meta">NAIST</div>
-							</div><!--//card-text-->
-							<a href="#modal-speaker-4" data-toggle="modal" data-target="#modal-speaker-4">Read more &rarr;</a>
-						</div><!--//card-->
+							</div>
+							<!--//card-text-->
+							<a href="#modal-speaker-4" data-toggle="modal" data-target="#modal-speaker-4">Read more
+								&rarr;</a>
+						</div>
+						<!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list-->
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
 						</div>
-					</div><!--//card-->
-				</div><!--//col-->
+					</div>
+					<!--//card-->
+				</div>
+				<!--//col-->
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-5" data-toggle="modal" data-target="#modal-speaker-5"><img src="assets/images/speakers/220px-Syed_Akhter_Hossain.jpg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-5" data-toggle="modal" data-target="#modal-speaker-5"><img
+								src="assets/images/speakers/220px-Syed_Akhter_Hossain.jpg"
+								class="card-img-top rounded-0" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Dr. Syed Akhter Hossain</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Professor</div>
 								<div class="meta">ULAB</div>
-							</div><!--//card-text-->
-							<a href="#modal-speaker-5" data-toggle="modal" data-target="#modal-speaker-5">Read more &rarr;</a>
-						</div><!--//card-->
+							</div>
+							<!--//card-text-->
+							<a href="#modal-speaker-5" data-toggle="modal" data-target="#modal-speaker-5">Read more
+								&rarr;</a>
+						</div>
+						<!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list-->
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
 						</div>
-					</div><!--//card-->
-				</div><!--//col-->
+					</div>
+					<!--//card-->
+				</div>
+				<!--//col-->
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-6" data-toggle="modal" data-target="#modal-speaker-6"><img src="assets/images/speakers/speaker-6.jpg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-6" data-toggle="modal" data-target="#modal-speaker-6"><img
+								src="assets/images/speakers/speaker-6.jpg" class="card-img-top rounded-0" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Andy Doe</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Senior Software Engineer</div>
 								<div class="meta">Twitter</div>
-							</div><!--//card-text-->
-							<a href="#modal-speaker-6" data-toggle="modal" data-target="#modal-speaker-6">Read more &rarr;</a>
-						</div><!--//card-->
+							</div>
+							<!--//card-text-->
+							<a href="#modal-speaker-6" data-toggle="modal" data-target="#modal-speaker-6">Read more
+								&rarr;</a>
+						</div>
+						<!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list-->
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
 						</div>
-					</div><!--//card-->
-				</div><!--//col-->
+					</div>
+					<!--//card-->
+				</div>
+				<!--//col-->
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-7" data-toggle="modal" data-target="#modal-speaker-7"><img src="assets/images/speakers/speaker-7.jpg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-7" data-toggle="modal" data-target="#modal-speaker-7"><img
+								src="assets/images/speakers/speaker-7.jpg" class="card-img-top rounded-0" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Alice Doe</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Senior Software Developer</div>
 								<div class="meta">Facebook</div>
-							</div><!--//card-text-->
-							<a href="#modal-speaker-7" data-toggle="modal" data-target="#modal-speaker-7">Read more &rarr;</a>
-						</div><!--//card-->
+							</div>
+							<!--//card-text-->
+							<a href="#modal-speaker-7" data-toggle="modal" data-target="#modal-speaker-7">Read more
+								&rarr;</a>
+						</div>
+						<!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list-->
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
 						</div>
-					</div><!--//card-->
-				</div><!--//col-->
+					</div>
+					<!--//card-->
+				</div>
+				<!--//col-->
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-8" data-toggle="modal" data-target="#modal-speaker-8"><img src="assets/images/speakers/speaker-8.jpg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-8" data-toggle="modal" data-target="#modal-speaker-8"><img
+								src="assets/images/speakers/speaker-8.jpg" class="card-img-top rounded-0" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Thomas Doe</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Lead Developer</div>
 								<div class="meta">Microsoft</div>
-							</div><!--//card-text-->
-							<a href="#modal-speaker-8" data-toggle="modal" data-target="#modal-speaker-8">Read more &rarr;</a>
-						</div><!--//card-->
+							</div>
+							<!--//card-text-->
+							<a href="#modal-speaker-8" data-toggle="modal" data-target="#modal-speaker-8">Read more
+								&rarr;</a>
+						</div>
+						<!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list-->
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
 						</div>
-					</div><!--//card-->
-				</div><!--//col-->
-			</div><!--//row-->
-			
-		</div><!--//container-->
-		
-	</section><!--//speakers-section-->
-	
+					</div>
+					<!--//card-->
+				</div>
+				<!--//col-->
+			</div>
+			<!--//row-->
+
+		</div>
+		<!--//container-->
+
+	</section>
+	<!--//speakers-section-->
+
 	<div class="container">
 		<hr>
 	</div>
-	
+
 	<section id="schedule-section" class="schedule-section section">
 		<div class="container">
 			<h3 class="section-heading text-center mb-5">Schedule</h3>
-			
+
 			<!-- Nav tabs -->
 			<ul class="schedule-nav nav nav-pills nav-fill" id="myTab" role="tablist">
 				<li class="nav-item mr-2">
-					<a class="nav-link active" id="tab-1" data-toggle="tab" href="#tab-1-content" role="tab" aria-controls="tab-1-content" aria-selected="true">
+					<a class="nav-link active" id="tab-1" data-toggle="tab" href="#tab-1-content" role="tab"
+						aria-controls="tab-1-content" aria-selected="true">
 						<span class="heading">Important Dates</span>
 						<span class="meta"></span>
 					</a>
 				</li>
 				<li class="nav-item mr-2">
-					<a class="nav-link" id="tab-2" data-toggle="tab" href="#tab-2-content" role="tab" aria-controls="tab-2-content" aria-selected="false">
+					<a class="nav-link" id="tab-2" data-toggle="tab" href="#tab-2-content" role="tab"
+						aria-controls="tab-2-content" aria-selected="false">
 						<span class="heading">Event Schedule</span>
 						<span class="meta"></span>
 					</a>
 				</li>
-                                
-				
+
+
 			</ul>
-			
+
 			<!-- Tab panes -->
 			<div class="schedule-tab-content tab-content">
 				<div class="tab-pane active" id="tab-1-content" role="tabpanel" aria-labelledby="tab-1">
@@ -834,259 +1200,354 @@
 							<h4 class="time mb-3">25 Aug, 2021</h4>
 							<div class="profile">
 								<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a>
-								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a></div>
-							</div><!--//profile-->
-						</div><!--//meta-->
+								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal"
+										data-target="#modal-speaker-1"></a></div>
+							</div>
+							<!--//profile-->
+						</div>
+						<!--//meta-->
 						<div class="content">
 							<h3 class="title mb-3">Last Day for Full Paper Submission</h3>
 							<div class="location mb-3"><i class="fas fa-map-marker-alt mr-2"></i>Online</div>
-							<div class="desc">  </div>
-						</div><!--//content-->
-					</div><!--//item-->
+							<div class="desc"> </div>
+						</div>
+						<!--//content-->
+					</div>
+					<!--//item-->
 					<div class="item item-talk">
 						<div class="meta">
 							<h4 class="time mb-3">30 Sept, 2021</h4>
 							<div class="profile">
 								<a href="#modal-speaker-2" data-toggle="modal" data-target="#modal-speaker-1"></a>
-								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a></div>
-							</div><!--//profile-->
-						</div><!--//meta-->
+								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal"
+										data-target="#modal-speaker-1"></a></div>
+							</div>
+							<!--//profile-->
+						</div>
+						<!--//meta-->
 						<div class="content">
 							<h3 class="title mb-3">Notification of Acceptance</h3>
 							<div class="location mb-3"><i class="fas fa-map-marker-alt mr-2"></i>Online</div>
 							<div class="desc"> </div>
-						</div><!--//content-->
-					</div><!--//item-->
+						</div>
+						<!--//content-->
+					</div>
+					<!--//item-->
 					<div class="item item-other">
 						<div class="meta">
 							<h4 class="time mb-3">15 Oct, 2021</h4>
-						</div><!--//meta-->
+						</div>
+						<!--//meta-->
 						<div class="content">
 							<h3 class="title mb-3">Submissions of Camera Ready</h3>
 							<div class="location mb-3"><i class="fas fa-map-marker-alt mr-2"></i>Online</div>
 							<div class="desc"> </div>
-						</div><!--//content-->
-					</div><!--//item-->
+						</div>
+						<!--//content-->
+					</div>
+					<!--//item-->
 					<div class="item item-talk">
 						<div class="meta">
 							<h4 class="time mb-3">15 Oct, 2021</h4>
 							<div class="profile">
 								<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a>
-								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a></div>
-							</div><!--//profile-->
-						</div><!--//meta-->
+								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal"
+										data-target="#modal-speaker-1"></a></div>
+							</div>
+							<!--//profile-->
+						</div>
+						<!--//meta-->
 						<div class="content">
 							<h3 class="title mb-3">Author Registration Deadline</h3>
 							<div class="location mb-3"><i class="fas fa-map-marker-alt mr-2"></i>Online</div>
 							<div class="desc"></div>
-						</div><!--//content-->
-					</div><!--//item-->
+						</div>
+						<!--//content-->
+					</div>
+					<!--//item-->
 					<div class="item item-talk">
 						<div class="meta">
 							<h4 class="time mb-3">12 Nov - 13 Nov</h4>
 							<div class="profile">
 								<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a>
-								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1"></a></div>
-							</div><!--//profile-->
-						</div><!--//meta-->
+								<div class="name"><a class="theme-link" href="#modal-speaker-1" data-toggle="modal"
+										data-target="#modal-speaker-1"></a></div>
+							</div>
+							<!--//profile-->
+						</div>
+						<!--//meta-->
 						<div class="content">
 							<h3 class="title mb-3">Conference Dates</h3>
 							<div class="location mb-3"><i class="fas fa-map-marker-alt mr-2"></i>Online</div>
 							<div class="desc"> </div>
-						</div><!--//content-->
 						</div>
+						<!--//content-->
 					</div>
-					
+				</div>
+
 				<!--//tab-1-content-->
 				<div class="tab-pane no-timeline" id="tab-2-content" role="tabpanel" aria-labelledby="tab-2">
 					<h4 class="text-center py-5 text-muted">Event Schedule Coming Soon...</h4>
-				</div><!--//tab-2-content-->
+				</div>
+				<!--//tab-2-content-->
 
-			<div class="schedule-cta text-center mx-auto"><a href="" class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0" target="_blank">Download Schedule</a><a href="" class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0" target="_blank">Author Guidelines</a></div>
-		</div><!--//container-->
-	</section><!--//schedule-section-->
-	
+				<div class="schedule-cta text-center mx-auto"><a href=""
+						class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0"
+						target="_blank">Download Schedule</a><a href=""
+						class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0"
+						target="_blank">Author Guidelines</a></div>
+			</div>
+			<!--//container-->
+	</section>
+	<!--//schedule-section-->
+	<div class="container">
+		<hr>
+	</div>
 	<!-- ======= Departments Section ======= -->
-    <section id="departments" class="departments">
+	<section id="departments" class="departments">
 		<div class="container">
-  
-		  <div class="section-title">
-			<p><br><br></p>
-			<h2 style="text-align: center;">Committee</h2>
-			<p style="text-align: center; font-size: large;">Our Esteemed Committee Members<br></p>
-		  </div>
-  
-		  <div class="row">
-			<div class="col-lg-3">
-			  <ul class="nav nav-tabs flex-column">
-				<li class="nav-item">
-				  <a class="nav-link" data-toggle="tab" href="#tab-3">Steering Committee</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" data-toggle="tab" href="#tab-4">Technical Program Committee</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" data-toggle="tab" href="#tab-5">Organizing Committee</a>
-				</li>
-			  </ul>
+
+			<div class="section-title">
+
+				<h2 style="text-align: center;">Committee</h2>
+				<p style="text-align: center; font-size: large;">Our Esteemed Committee Members<br></p>
 			</div>
-			<div class="col-lg-9 mt-4 mt-lg-0">
-			  <div class="tab-content">
-				<div class="tab-pane" id="tab-3">
-					<div class="row">
-					  <div class="col-lg-8 details order-2 order-lg-1">
-						<h3>Steering Committee</h3>
-						<ul class="font-italic">
-							<li> <i>&nbsp&nbsp</i>Prof. Chai Wutiwiwatchai, NECTEC, Thailand </li>
-							<li> <i>&nbsp&nbsp</i>Dr. Bin Ma, Institute for Infocomm Research, Singapore </li>
-							<li> <i>&nbsp&nbsp</i>Dr. Hsin-Min Wang, IIS, Academia Sinica, Taiwan </li>
-						</ul>	
-						</div>
-					  <div class="col-lg-4 text-center order-1 order-lg-2">
-						<img src="assets/images/speakers/3.JPG" alt="" class="img-fluid">
-					  </div>
-					</div>
-				  </div>
-				<div class="tab-pane" id="tab-4">
-				  <div class="row">
-					<div class="col-lg-8 details order-2 order-lg-1">
-					  <h3>Technical Program Committee</h3>
-					  
-					  <ul class="font-italic">
-						<li> <i >&nbsp&nbsp</i>Prof. Chai Wutiwiwatchai, NECTEC, Thailand </li>
-						<li> <i >&nbsp&nbsp</i>Dr. Bin Ma, Institute for Infocomm Research, Singapore </li>
-						<li> <i >&nbsp&nbsp</i>Dr. Hsin-Min Wang, IIS, Academia Sinica, Taiwan </li>
-						<li> <i >&nbsp&nbsp</i>Dr. Ashish Seth, Inha University, Tashkent</li>
-						<li> <i >&nbsp&nbsp</i>Dr. Mirna Adriani, UI, Indonesia</li>
-						<li> <i >&nbsp&nbsp</i>Dr. Deepak Garg, Bennett University, India</li>
-						<li> <i >&nbsp&nbsp</i>Dr. Mani Madhukar, IBM India Pvt. Ltd</li>
-						<li> <i >&nbsp&nbsp</i>Dr. Shakir Khan, Imam University, Saudi Arabia</li>
-						<li> <i>&nbsp&nbsp</i>Dr. P. K. Dass, IIT Guwahati, India</li>
-						<li> <i>&nbsp&nbsp</i>Prof. Omar Farooq, AMU, India</li>
-						<li> <i>&nbsp&nbsp</i>Dr Shweta Bansal, KIIT, Gurgaon, India</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Arun Kumar, Jubail Univ., SA</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Anup Girdhar, Sedulity Solutions,Delhi</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Poonam Bansal, MSIT, Delhi</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Vinod Shukla, Amity University Dubai</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Kirti Tyagi, Inha University, Tashkent</li>
-						<li> <i>&nbsp&nbsp</i>Dr Atul Kumar, KIIT, Gurgaon</li>
-						<li> <i>&nbsp&nbsp</i>Dr Sanjay Misra, Covenant Univ., Nigeria</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Poonam Bansal, MSIT, Delhi</li>
-						<li> <i>&nbsp&nbsp</i>Mrs. Swaran Lata, Ex-Director & Head, TDIL Programme, DEITY</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Sunita Arora, CDAC</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Kamini Malhotra, SAG, DRDO</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Shweta Sinha, KIIT, Gurgaon</li>
-						<li> <i>&nbsp&nbsp</i>Dr. A. K. Mohapatra, CTA, Delhi Police</li>
-						<li> <i>&nbsp&nbsp</i>Prof. R. K. Singh, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Prof. Ashwni Kumar, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Prof. Deepak Garg, Bennett University</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Archana Baliyan, MSIT</li>
-						
 
-
-					  </ul>
-					 
-					</div>
-					<div class="col-lg-4 text-center order-1 order-lg-2">
-					  <img src="assets/images/speakers/4(2).JPG" alt="" class="img-fluid">
-					</div>
-				  </div>
-				</div>
-				<div class="tab-pane" id="tab-5">
-				  <div class="row">
-					<div class="col-lg-8 details order-2 order-lg-1">
-					  <h3>Organizing Committee</h3>
-					 
-					  <ul class="font-italic">
-						<li><i>&nbsp&nbsp</i> Dr. Arun Sharma, IGDTUW </li>
-						<li><i>&nbsp&nbsp</i> Dr. Ela Kumar, IGDTUW </li>
-						<li> <i>&nbsp&nbsp</i>Dr. Nidhi Goel, IGDTUW </li>
-						<li> <i>&nbsp&nbsp</i>Dr. Manoj Soni, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Ar. Preeti Chauhan, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Preeti Vajpeyi, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Shalini Arora, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Dr Jasdeep Kaur, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Ar. Vishal Rai, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Ms. Bhawna Narwal, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Dr. N. R. Chauhan, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Viveak Chawla, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Chandra Prakash, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Mohana Ghosh, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Dr. Sourabh Bharti, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Ms. Pooja Gambhir, IGDTUW</li>
-						<li> <i>&nbsp&nbsp</i>Ms. Vasundhra Gupta, IGDTUW</li>
-						
+			<div class="row">
+				<div class="col-lg-3">
+					<ul class="nav nav-tabs flex-column">
+						<li class="nav-item active">
+							<a class="nav-link" data-toggle="tab" href="#tab-3">Steering Committee</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#tab-4">Technical Program Committee</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#tab-5">Organizing Committee</a>
+						</li>
 					</ul>
-					  
-					</div>
-					<div class="col-lg-4 text-center order-1 order-lg-2">
-					  <img src="assets/images/speakers/2.JPG" alt="" class="img-fluid">
-					</div>
-				  </div>
 				</div>
-			  </div>
+				<div class="col-lg-9 mt-4 mt-lg-0">
+					<div class="tab-content">
+						<div class="tab-pane" id="tab-3">
+							<div class="row">
+								<div class="col-lg-7 details order-2 order-lg-1">
+									<h3>Steering Committee</h3>
+
+									<ul class="list-unstyled text-left d-inline-block ">
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Chai Wutiwiwatchai, NECTEC,
+											Thailand</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Bin Ma, Institute for Infocomm
+											Research, Singapore</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Hsin-Min Wang, IIS, Academia
+											Sinica, Taiwan</li>
+									</ul>
+								</div>
+								<div class="col-lg-5 text-center order-1 order-lg-2">
+									<img src="assets/images/speakers/3.JPG" alt="" height="270px" width="400px"
+										style="box-shadow: 5px 10px 18px #414040;">
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab-4">
+							<div class="row">
+								<div class="col-lg-7 details order-2 order-lg-1">
+									<h3>Technical Program Committee</h3>
+
+									<ul class="list-unstyled text-left d-inline-block ">
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Chai Wutiwiwatchai, NECTEC,
+											Thailand</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Chai Wutiwiwatchai, NECTEC,
+											Thailand</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Bin Ma, Institute for Infocomm
+											Research, Singapore</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Hsin-Min Wang, IIS, Academia
+											Sinica, Taiwan</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Ashish Seth, Inha University,
+											Tashkent</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mirna Adriani, UI, Indonesia</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Deepak Garg, Bennett University,
+											India</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mani Madhukar, IBM India Pvt. Ltd
+										</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Shakir Khan, Imam University, Saudi
+											Arabia</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. P. K. Dass, IIT Guwahati, India
+										</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Omar Farooq, AMU, India</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr Shweta Bansal, KIIT, Gurgaon, India
+										</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Arun Kumar, Jubail Univ., SA</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Poonam Bansal, MSIT, Delhi</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Vinod Shukla, Amity University
+											Dubai</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Kirti Tyagi, Inha University,
+											Tashkent</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr Atul Kumar, KIIT, Gurgaon</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr Sanjay Misra, Covenant Univ.,
+											Nigeria</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Mrs. Swaran Lata, Ex-Director & Head,
+											TDIL Programme,
+											DEITY</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Sunita Arora, CDAC</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Kamini Malhotra, SAG, DRDO</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Shweta Sinha, KIIT, Gurgaon</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. A. K. Mohapatra, CTA, Delhi Police
+										</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. R. K. Singh, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Ashwni Kumar, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Deepak Garg, Bennett University
+										</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Archana Baliyan, MSIT</li>
+
+									</ul>
+
+								</div>
+								<div class="col-lg-5 text-center order-1 order-lg-2">
+									<img src="assets/images/speakers/4(2).JPG" alt="" height="350px" width="500px"
+										style="box-shadow: 5px 10px 18px #414040;">
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab-5">
+							<div class="row">
+								<div class="col-lg-6 details order-2 order-lg-1">
+									<h3>Organizing Committee</h3>
+
+									<ul class="list-unstyled text-left d-inline-block ">
+										<li><i class="fa fa-chevron-circle-right mr-2"></i>Dr. Arun Sharma, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Ela Kumar, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Nidhi Goel, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Manoj Soni, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Preeti Chauhan, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Preeti Vajpeyi, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Shalini Arora, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr Jasdeep Kaur, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Vishal Rai, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Ms. Bhawna Narwal, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. N. R. Chauhan, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Vivek Chawla, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Chandra Prakash, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mohana Ghosh, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Sourabh Bharti, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Ms. Pooja Gambhir, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Ms. Vasundhra Gupta, IGDTUW</li>
+
+									</ul>
+
+								</div>
+								<div class="col-lg-6 text-center order-1 order-lg-2">
+									<img src="assets/images/speakers/2.JPG" alt="" height="400px" width="550px"
+										style="box-shadow: 5px 10px 18px #414040;">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		  </div>
-		  <p><br><br></p>
+			<p><br><br></p>
 		</div>
-	  </section>
+	</section>
 
 	<section id="venue-section" class="venue-section section  theme-bg-primary text-white">
 		<div class="container">
-			<p>  <br> <br></p>
+			<p> <br> <br></p>
 			<h1 class="section-heading text-center mb-5 text-white">How To Reach Here</h1>
 			<div class="row py-lg-5">
 				<div class="col-12 col-lg-7 h-100">
 					<div class="desc">
 						<h3 class="text-white mb-3">Venue</h3>
 						<p>Madrasa Road<br>St. James Church<br>Kashmere Gate, Delhi-110006</p>
-						
+
 						<div class="row pt-3">
 							<div class="col-12 col-md-6 mb-4">
 								<div class="grid-item p-4">
-									<h5 class="text-white mb-3 title"><i class="fas fa-plane-departure mr-2"></i>By Plane</h5>
+									<h5 class="text-white mb-3 title"><i class="fas fa-plane-departure mr-2"></i>By
+										Plane</h5>
 									<p>Nearest airport is Indira Gandhi International Airport</p>
-									
-								</div><!--//grid-item-->
-							</div><!--col-->
+
+								</div>
+								<!--//grid-item-->
+							</div>
+							<!--col-->
 							<div class="col-12 col-md-6 mb-4">
 								<div class="grid-item p-4">
 									<h5 class="text-white mb-3 title"><i class="fas fa-car mr-2"></i>By Car</h5>
 									<p>You can travel by car as well to avoid crowded locations</p>
-									
-								</div><!--//grid-item-->
-							</div><!--col-->
+
+								</div>
+								<!--//grid-item-->
+							</div>
+							<!--col-->
 							<div class="col-12 col-md-6 mb-4">
 								<div class="grid-item p-4">
 									<h5 class="text-white mb-3 title"><i class="fas fa-bus-alt mr-2"></i>By Bus</h5>
 									<p>Nearest bus stop is Inter State Bus Terminal (ISBT). </p>
-									
-								</div><!--//grid-item-->
-							</div><!--col-->
+
+								</div>
+								<!--//grid-item-->
+							</div>
+							<!--col-->
 							<div class="col-12 col-md-6 mb-4">
 								<div class="grid-item p-4">
 									<h5 class="text-white mb-3 title"><i class="fas fa-subway mr-2"></i>By Train</h5>
 									<p>Nearest railway station is Old Delhi Railway Station</p>
-									
-								</div><!--//grid-item-->
-							</div><!--col-->
-						</div><!--//row-->
-						<h4 class="text-white mb-4 mt-3 mt-lg-5">Google Maps  </h4>
-						<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Indira%20Gandhi%20Delhi%20Technical%20University&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://soap2day-to.com">soap2day</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">google maps code generator</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+
+								</div>
+								<!--//grid-item-->
+							</div>
+							<!--col-->
+						</div>
+						<!--//row-->
+						<h4 class="text-white mb-4 mt-3 mt-lg-5">Google Maps </h4>
+						<div class="mapouter">
+							<div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
+									src="https://maps.google.com/maps?q=Indira%20Gandhi%20Delhi%20Technical%20University&t=&z=15&ie=UTF8&iwloc=&output=embed"
+									frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+									href="https://soap2day-to.com">soap2day</a><br>
+								<style>
+									.mapouter {
+										position: relative;
+										text-align: right;
+										height: 500px;
+										width: 600px;
+									}
+								</style><a href="https://www.embedgooglemap.net">google maps code generator</a>
+								<style>
+									.gmap_canvas {
+										overflow: hidden;
+										background: none !important;
+										height: 500px;
+										width: 600px;
+									}
+								</style>
+							</div>
+						</div>
 						<p> </p>
-					</div><!--//desc-->
-				</div><!--//col-->
+					</div>
+					<!--//desc-->
+				</div>
+				<!--//col-->
 				<div class="col-12 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
 					<div class="figures-holder">
-						<div class="figure figure-1"><img class="shadow" src="assets/images/speakers/1.jpg" alt=""></div>
-						<div class="figure figure-2"><img class="shadow" src="assets/images/speakers/2.JPG" alt=""></div>
-						<div class="figure figure-4"><img class="shadow" src="assets/images/speakers/4(2).JPG" alt=""></div>
-						<div class="figure figure-2"><img class="shadow" src="assets/images/speakers/2.JPG" alt=""></div>
-					</div><!--//figures-holder-->
-				</div><!--//col-->
-			</div><!--//row-->
-		</div><!--//container-->
-	</section><!--//venue-section-->
+						<div class="figure figure-1"><img class="shadow" src="assets/images/speakers/1.jpg" alt="">
+						</div>
+						<div class="figure figure-2"><img class="shadow" src="assets/images/speakers/2.JPG" alt="">
+						</div>
+						<div class="figure figure-4"><img class="shadow" src="assets/images/speakers/4(2).JPG" alt="">
+						</div>
+						<div class="figure figure-2"><img class="shadow" src="assets/images/speakers/2.JPG" alt="">
+						</div>
+					</div>
+					<!--//figures-holder-->
+				</div>
+				<!--//col-->
+			</div>
+			<!--//row-->
+		</div>
+		<!--//container-->
+	</section>
+	<!--//venue-section-->
 
 	<!--register-section-->
 	<section id="about-section" class="about-section section theme-bg-light">
@@ -1094,122 +1555,133 @@
 			<div class="offers  bg-white p-4 p-lg-5">
 				<p> <br> <br> </p>
 				<h3 class="section-heading text-center mb-3">Register</h3>
-				<div class="row" >
-						<div class="col">
-						 <table cellpadding = "10px" width="100%" class="border" id="regiter-table">
-							 <tr><td><h5>Indian Authors</h5></td><td></td></tr>
-							 <tr>
-								 <td>Faculty Members/Industry Professionals</td>
-								 <td>&#8377 7000/-</td>
-								 
-							 </tr>
-							 <tr>
+				<div class="row">
+					<div class="col">
+						<table cellpadding="10px" width="100%" class="border" id="regiter-table">
+							<tr>
+								<td>
+									<h5>Indian Authors</h5>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Faculty Members/Industry Professionals</td>
+								<td>&#8377 7000/-</td>
+
+							</tr>
+							<tr>
 								<td>Students</td>
 								<td>&#8377 6000/-</td>
-								
+
 							</tr>
 							<tr>
 								<td>Delegates (Non Authors/Additional Authors)</td>
-								<td>&#8377 3000/-</td>	
+								<td>&#8377 3000/-</td>
 							</tr>
-						 </table>		 
-					</div>	
-				</div><br/>
+						</table>
+					</div>
+				</div><br />
 				<h6 style="color: gray;">(Papers beyond 6 pages will be charged extra @1000 per page)</h6>
-				<div class="row" >
+				<div class="row">
 					<div class="col">
-					 <table cellpadding = "10px" width="100%" class="border" style="margin-top: 15px;" id="regiter-table" >
-						 <tr><td><h5>Foreign Authors</h5></td><td></td></tr>
-						 <tr >
-							 <td>Faculty Members/Industry Professionals</td>
-							 <td>USD 200</td>
-							 
-						 </tr>
-						 <tr>
-							<td>Students</td>
-							<td>USD 150</td>
-							
-						</tr>
-						<tr>
-							<td>Delegates (Non Authors/Additional Authors)</td>
-							<td>USD 100</td>	
-						</tr>
-					 </table>
-					 
+						<table cellpadding="10px" width="100%" class="border" style="margin-top: 15px;"
+							id="regiter-table">
+							<tr>
+								<td>
+									<h5>Foreign Authors</h5>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Faculty Members/Industry Professionals</td>
+								<td>USD 200</td>
+
+							</tr>
+							<tr>
+								<td>Students</td>
+								<td>USD 150</td>
+
+							</tr>
+							<tr>
+								<td>Delegates (Non Authors/Additional Authors)</td>
+								<td>USD 100</td>
+							</tr>
+						</table>
+
+					</div>
+
 				</div>
-				
+
 			</div>
-				
-			</div>			
 		</div>
 	</section>
 
 
-	    <!-- ======= Gallery Section ======= -->
-		<br>
-		<h2 style="text-align: center;">AIST 2019-2020 Glimpse Slideshow</h2>
-		<div class="slideshow-container">
+	<!-- ======= Gallery Section ======= -->
+	<br>
+		<h2 style="text-align: center;">AIST 2019-2020 Glimpse Slideshow</h2> 
+	<div class="slideshow-container">
 
-		<div class="mySlides fade" style="text-align: left;" >
-		<div class="numbertext">1 / 4</div>
-		<img src="assets/images/gallery/1.jpg" style="width:100%">
+		<div class="mySlides fade" style="text-align: left;">
+			<div class="numbertext">1 / 4</div>
+			<img src="assets/images/gallery/1.jpg" style="width:100%">
 		</div>
 
 		<div class="mySlides fade" style="text-align: left;">
-		<div class="numbertext">2 / 4</div>
-		<img src="assets/images/gallery/2.jpg" style="width:100%">
+			<div class="numbertext">2 / 4</div>
+			<img src="assets/images/gallery/2.jpg" style="width:100%">
 		</div>
 
 		<div class="mySlides fade" style="text-align: left;">
-		<div class="numbertext">3 / 4</div>
-		<img src="assets/images/gallery/3.jpg" style="width:100%">
+			<div class="numbertext">3 / 4</div>
+			<img src="assets/images/gallery/3.jpg" style="width:100%">
 		</div>
 
 		<div class="mySlides fade" style="text-align: left;">
 			<div class="numbertext">4/ 4</div>
 			<img src="assets/images/gallery/4.jpg" style="width:100%">
-			</div>
-
-		</div>
-		<br>
-
-		<div style="text-align:center">
-		<span class="dot"></span> 
-		<span class="dot"></span> 
-		<span class="dot"></span> 
-		<span class="dot"></span> 
-
 		</div>
 
-		<script>
+	</div>
+	<br>
+
+	<div style="text-align:center">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+
+	</div>
+	  <script>
 		var slideIndex = 0;
 		showSlides();
 
 		function showSlides() {
-		var i;
-		var slides = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("dot");
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";  
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) { slideIndex = 1 }
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+			setTimeout(showSlides, 2000); // Change image every 2 seconds
 		}
-		slideIndex++;
-		if (slideIndex > slides.length) {slideIndex = 1}    
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		}
-		slides[slideIndex-1].style.display = "block";  
-		dots[slideIndex-1].className += " active";
-		setTimeout(showSlides, 2000); // Change image every 2 seconds
-		}
-		</script>
+	</script>
 
 
-<!-- End Gallery Section -->
+	<!-- End Gallery Section -->
 
 
 	<section id="sponsors-section" class="sponsors-section section">
 		<div class="container">
-			<br><hr><br><br>
+			<br>
+			<hr><br><br>
 			<h3 class="section-heading text-center mb-3">AIST-2021</h3>
 			<div class="section-intro text-center single-col-max mx-auto mb-5"> Associations &amp; Partners</div>
 			<div class="row logos justify-content-center">
@@ -1225,190 +1697,216 @@
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-10.svg" alt=""></div>
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-11.svg" alt=""></div>
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-12.svg" alt=""></div>
-			</div><!--//row-->
+			</div>
+			<!--//row-->
 			<!-- <div class="sponsors-cta text-center pt-5"><a class="btn-primary btn btn-lg" href="#">Become A Sponsor</a></div> -->
-		</div><!--//container-->
-	</section><!--//sponsors-section-->
+		</div>
+		<!--//container-->
+	</section>
+	<!--//sponsors-section-->
 
-	<br><hr><br>
+	<br>
+	<hr><br>
 
 	<!-- FAQ ADDED -->
 	<div class="content">
 		<h1 style="text-align: center; color: #414040;">Frequently Asked Question</h1><br>
-		  
-		<!-- __________________________ SECTIONS ___________________________ --> 
-		
+
+		<!-- __________________________ SECTIONS ___________________________ -->
+
 		<!-- <h6 style="text-align: center; color: #5f5d5d;">Happy to answer all your doubts</h6> -->
-		
+
 		<div>
-		  <input type="checkbox" id="question1" name="q"  class="questions">
-		  <div class="plus">+</div>
-		  <label for="question1" class="question">
-		   Will your books and materials withstand repeated use—are they satisfaction guaranteed?
-		  </label>
-		  <div class="answers">
-			<p>Our hardcover books are library bound with exposed reinforced endsheets, which means extra lasting power, use after use. They are side sewn or section sewn, and all covers are laminated with glossy film. The books are vibrant, durable, and unconditionally guaranteed. </p>
-			
-		  </div>
+			<input type="checkbox" id="question1" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question1" class="question">
+				Will your books and materials withstand repeated use—are they satisfaction guaranteed?
+			</label>
+			<div class="answers">
+				<p>Our hardcover books are library bound with exposed reinforced endsheets, which means extra lasting
+					power, use after use. They are side sewn or section sewn, and all covers are laminated with glossy
+					film. The books are vibrant, durable, and unconditionally guaranteed. </p>
+
+			</div>
 		</div>
-		<!-- _____________________________________________________ --> 
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question2" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question2" class="question">
-		Do you have “green” products?
-		  </label>
-		  <div class="answers">
-			<p>Many of Cavendish Square’s products are produced with recycled pulp content, allowing our company to pursue its green goals while adding additional value for your eco-conscious purchases. </p>
-			
-		  </div>
+			<input type="checkbox" id="question2" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question2" class="question">
+				Do you have “green” products?
+			</label>
+			<div class="answers">
+				<p>Many of Cavendish Square’s products are produced with recycled pulp content, allowing our company to
+					pursue its green goals while adding additional value for your eco-conscious purchases. </p>
+
+			</div>
 		</div>
-		 <!-- _____________________________________________________ -->  
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question3" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question3" class="question">
-		Do you provide book processing?
-		  </label>
-		  <div class="answers">
-			<p>Cavendish Square gladly provides library processing services. Please call 1-877-980-4450 or email Customer Service to learn more about processing and available and customizable options for your bookshelf needs. </p>
-			
-		  </div>
+			<input type="checkbox" id="question3" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question3" class="question">
+				Do you provide book processing?
+			</label>
+			<div class="answers">
+				<p>Cavendish Square gladly provides library processing services. Please call 1-877-980-4450 or email
+					Customer Service to learn more about processing and available and customizable options for your
+					bookshelf needs. </p>
+
+			</div>
 		</div>
-		<!-- _____________________________________________________ -->  
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question4" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question4" class="question">
-		Do you keep my library processing specifications on file?
-		  </label>
-		  <div class="answers">
-			<p>Yes, Cavendish Square keeps all customer processing specifications on file. You won't need to fill out library processing forms each time you order, we’ll do it for you. You can download a processing form here. </p>
-			
-		  </div>
+			<input type="checkbox" id="question4" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question4" class="question">
+				Do you keep my library processing specifications on file?
+			</label>
+			<div class="answers">
+				<p>Yes, Cavendish Square keeps all customer processing specifications on file. You won't need to fill
+					out library processing forms each time you order, we’ll do it for you. You can download a processing
+					form here. </p>
+
+			</div>
 		</div>
-		<!-- _____________________________________________________ -->  
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question5" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question5" class="question">
-		What is the charge for processing?
-		  </label>
-		  <div class="answers">
-			<p>We offer free processing on all orders over $350.  On orders less than $350 the cost of barcodes and marc records is $25.00 per order. </p>
-			
-		  </div>
+			<input type="checkbox" id="question5" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question5" class="question">
+				What is the charge for processing?
+			</label>
+			<div class="answers">
+				<p>We offer free processing on all orders over $350. On orders less than $350 the cost of barcodes and
+					marc records is $25.00 per order. </p>
+
+			</div>
 		</div>
-		<!-- _____________________________________________________ -->  
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question6" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question6" class="question">
-		Are your books on Accelerated Reader®?
-		  </label>
-		  <div class="answers">
-			<p>Accelerated Reader quizzes are available for many of our books.  The AR Logo will appear where quizzes are available.  For more about AR, please click here. </p>
-			
-		  </div>
+			<input type="checkbox" id="question6" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question6" class="question">
+				Are your books on Accelerated Reader®?
+			</label>
+			<div class="answers">
+				<p>Accelerated Reader quizzes are available for many of our books. The AR Logo will appear where quizzes
+					are available. For more about AR, please click here. </p>
+
+			</div>
 		</div>
-		<!-- _____________________________________________________ -->  
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question7" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question7" class="question">
-		Are your books correlated to state and national standards?
-		  </label>
-		  <div class="answers">
-			<p>Yes, all of our books are correlated to state and national standards. This web site’s correlation page will help you easily match our products with your state standards, and choose excellent selections for national standards. Otherwise, feel free to call us at 1-877-980-4450 and we’ll assist you in meeting your needs. </p>
-			
-		  </div>
+			<input type="checkbox" id="question7" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question7" class="question">
+				Are your books correlated to state and national standards?
+			</label>
+			<div class="answers">
+				<p>Yes, all of our books are correlated to state and national standards. This web site’s correlation
+					page will help you easily match our products with your state standards, and choose excellent
+					selections for national standards. Otherwise, feel free to call us at 1-877-980-4450 and we’ll
+					assist you in meeting your needs. </p>
+
+			</div>
 		</div>
-		<!-- _____________________________________________________ -->  
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question8" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question8" class="question">
-		Where can I find information about your authors or how can I contact them?
-		  </label>
-		  <div class="answers">
-			<p>Cavendish Square commissions authors who are subject-matter experts and professional writers. If you’d like to learn more about an author’s background or if you wish to contact one of our authors, please click here to submit your contact information along with the author’s name. </p>
-			
-		  </div>
+			<input type="checkbox" id="question8" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question8" class="question">
+				Where can I find information about your authors or how can I contact them?
+			</label>
+			<div class="answers">
+				<p>Cavendish Square commissions authors who are subject-matter experts and professional writers. If
+					you’d like to learn more about an author’s background or if you wish to contact one of our authors,
+					please click here to submit your contact information along with the author’s name. </p>
+
+			</div>
 		</div>
-		<!-- _____________________________________________________ -->  
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question9" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question9" class="question">
-		How do I submit a book idea, collection suggestion, or artwork to Cavendish Square?
-		  </label>
-		  <div class="answers">
-			<p>Cavendish Square would like to hear from you—we’re dedicated to offering an ever-expanding array of solutions that will meet your needs. Any ideas, suggestions, or creative input that Cavendish Square can follow to help you achieve academic success, please feel free to share with our representatives. Artists and writers may also contact our Customer Service team for information about contributing to Cavendish. </p>
-			
-		  </div>
+			<input type="checkbox" id="question9" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question9" class="question">
+				How do I submit a book idea, collection suggestion, or artwork to Cavendish Square?
+			</label>
+			<div class="answers">
+				<p>Cavendish Square would like to hear from you—we’re dedicated to offering an ever-expanding array of
+					solutions that will meet your needs. Any ideas, suggestions, or creative input that Cavendish Square
+					can follow to help you achieve academic success, please feel free to share with our representatives.
+					Artists and writers may also contact our Customer Service team for information about contributing to
+					Cavendish. </p>
+
+			</div>
 		</div>
-		<!-- _____________________________________________________ -->  
+		<!-- _____________________________________________________ -->
 		<div>
-		  <input type="checkbox" id="question10" name="q" class="questions">
-		  <div class="plus">+</div>
-		  <label for="question10" class="question">
-		Are your books available in other formats, such as eBooks?
-		  </label>
-		  <div class="answers">
-			<p>Cavendish Square titles are also available as eBooks.  Also available are over 50 database titles.  Click here for more information on our eBooks and digital databases.  For a complete list of available digital resources, please call Customer Service at 1-877-980-4450 between 9AM and 5 PM EST, Monday through Friday. </p>
-			
-		  </div>
+			<input type="checkbox" id="question10" name="q" class="questions">
+			<div class="plus">+</div>
+			<label for="question10" class="question">
+				Are your books available in other formats, such as eBooks?
+			</label>
+			<div class="answers">
+				<p>Cavendish Square titles are also available as eBooks. Also available are over 50 database titles.
+					Click here for more information on our eBooks and digital databases. For a complete list of
+					available digital resources, please call Customer Service at 1-877-980-4450 between 9AM and 5 PM
+					EST, Monday through Friday. </p>
+
+			</div>
 		</div>
-		</div>
+	</div>
 
 
-		<!-- END OF FAQ -->
-<hr>
+	<!-- END OF FAQ -->
+	<hr>
 
 
 
 	<section id="contact">
-	<div class="containerr">
-		<form action="mailto:oshinsaini18092000@gmail.com" method="post" enctype="text/plain">
+		<div class="containerr">
+			<form action="mailto:oshinsaini18092000@gmail.com" method="post" enctype="text/plain">
 				<h1 class="contact-us" style="color: #414040;">Contact Us</h1><br>
-	  
-		  <label for="fname">First Name</label>
-		  <input type="text" id="fname" name="firstname" placeholder="Your name..">
-	  
-		  <label for="lname">Last Name</label>
-		  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-	  
-		  <label for="country">Phone Number</label>
-		  <input type="text" id="cname" name="countryname" placeholder="Your phone number ..">
-		  <!-- <select id="country" name="country">
+
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+				<label for="country">Phone Number</label>
+				<input type="text" id="cname" name="countryname" placeholder="Your phone number ..">
+				<!-- <select id="country" name="country">
 			<option value="australia">Australia</option>
 			<option value="canada">Canada</option>
 			<option value="usa">USA</option>
 		  </select> -->
-	  
-		  <label for="subject">Subject</label>
-		  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-	  
-		  <input type="submit" value="Send" >
-		  <input type="reset" value="Reset" >
 
-	  
-		</form>
-	  </div>
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+				<input type="submit" value="Send">
+				<input type="reset" value="Reset">
+
+
+			</form>
+		</div>
 	</section>
-	
+
 
 	<footer class="footer py-5 theme-bg-primary">
 		<div class="container text-center">
-			
-			<ul class="social-list list-inline mb-4"> 
+
+			<ul class="social-list list-inline mb-4">
 				<li class="list-inline-item mr-3"><a href="#"><i class="fas fa-envelope"></i></a></li>
 				<li class="list-inline-item mr-3"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
 				<li class="list-inline-item mr-3"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
 				<li class="list-inline-item mr-0"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
-			</ul><!--//social-list-->
-			
-			
+			</ul>
+			<!--//social-list-->
+
+
 			<ul class="footer-links list-inline mx-auto mb-4">
 				<!-- 3rd International Conference on Artificial Intelligence and Speech Technology<br><br> -->
 				<li class="list-inline-item"><a href="#contact">Contact Us</a></li>
@@ -1416,21 +1914,24 @@
 				<li class="list-inline-item"><a href="#register-section">Register</a></li>
 				<li class="list-inline-item">|</li>
 				<li class="list-inline-item mr-0"><a href="#callForPapers">Call For Papers</a></li>
-			</ul><!--//footer-link-->
+			</ul>
+			<!--//footer-link-->
 			<hr>
-			
+
 			Copyright © IGDTUW All Rights Reserved<br>
 			<small class="copyright">Designed by Oshin Saini, Akansha Saini, Anwesha Roy</small>
-			
-		</div><!--//container-->	    
+
+		</div>
+		<!--//container-->
 	</footer>
 
-	
+
 
 
 
 	<!-- Modal Speaker -->
-	<div class="modal modal-speaker modal-speaker-1" id="modal-speaker-1" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+	<div class="modal modal-speaker modal-speaker-1" id="modal-speaker-1" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -1439,31 +1940,53 @@
 				</div>
 				<div class="modal-body p-0">
 					<div class="media flex-column flex-md-row theme-bg-light p-4 p-lg-5">
-						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto" src="assets/images/speakers/amita.jpg" alt="" />
-						
+						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto"
+							src="assets/images/speakers/amita.jpg" alt="" />
+
 						<div class="media-body text-center text-md-left mx-auto">
 							<h2 class="name mb-2">Dr. Amita Dev</h2>
 							<div class="meta">Vice Chancellor</div>
 							<div class="meta mb-2">IGDTUW</div>
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/amita-dev-06a47642?originalSubdomain=in"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list--> 
-						</div><!--//media-body-->
-					</div><!--//media-->
-					
-					<div class="desc p-4 p-lg-5">
-						<p style="text-align: justify;">Dr. (Mrs.) Amita Dev is holding the portfolio of Vice Chancellor of Indira Gandhi Delhi Technical University for Women, Delhi. She has 28 years of wide and rich experience in Teaching, Industry and Research. She received B.Tech.Degree from Punjab Engineering College, Chandigarh, M.S. and Ph.D. Degree in Computer Engineering from B.I.Ts, Pilani and Delhi College Of Engineering, Delhi, India respectively. She is recipient of the National Level AICTE Young Teacher Career Award in the year 1998 with 3 Lakhs Research Grant for pursuing advance research in Speech Recognition with connectionist model, a State Level Best Teacher Award from Government of NCT of Delhi, the National Level Best Engineering Teacher Award for significant contribution in the field of Research and Technology </p>
-						<p class="mb-0" style="text-align: justify;">Her research has focused extensively on NLP, Soft Computing, and Mobile Network. Dr. (Mrs.) Amita Dev is a Fellow of the Institution of Electronics and Telecommunication Engineers (IETE). She is a Life Member of the Indian Society for Technical Education (ISTE) and the Computer Society of India</p>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a
+										href="https://www.linkedin.com/in/amita-dev-06a47642?originalSubdomain=in"><i
+											class="fab fa-linkedin-in fa-fw"></i></a></li>
+
+							</ul>
+							<!--//social-list-->
+						</div>
+						<!--//media-body-->
 					</div>
-				</div><!--//modal-body-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
+					<!--//media-->
+
+					<div class="desc p-4 p-lg-5">
+						<p style="text-align: justify;">Dr. (Mrs.) Amita Dev is holding the portfolio of Vice Chancellor
+							of Indira Gandhi Delhi Technical University for Women, Delhi. She has 28 years of wide and
+							rich experience in Teaching, Industry and Research. She received B.Tech.Degree from Punjab
+							Engineering College, Chandigarh, M.S. and Ph.D. Degree in Computer Engineering from B.I.Ts,
+							Pilani and Delhi College Of Engineering, Delhi, India respectively. She is recipient of the
+							National Level AICTE Young Teacher Career Award in the year 1998 with 3 Lakhs Research Grant
+							for pursuing advance research in Speech Recognition with connectionist model, a State Level
+							Best Teacher Award from Government of NCT of Delhi, the National Level Best Engineering
+							Teacher Award for significant contribution in the field of Research and Technology </p>
+						<p class="mb-0" style="text-align: justify;">Her research has focused extensively on NLP, Soft
+							Computing, and Mobile Network. Dr. (Mrs.) Amita Dev is a Fellow of the Institution of
+							Electronics and Telecommunication Engineers (IETE). She is a Life Member of the Indian
+							Society for Technical Education (ISTE) and the Computer Society of India</p>
+					</div>
+				</div>
+				<!--//modal-body-->
+			</div>
+			<!--//modal-content-->
+		</div>
+		<!--//modal-dialog-->
+	</div>
+	<!--//modal-->
 
 	<!-- Modal Speaker -->
-	<div class="modal modal-speaker modal-speaker-2" id="modal-speaker-2" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+	<div class="modal modal-speaker modal-speaker-2" id="modal-speaker-2" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -1472,31 +1995,47 @@
 				</div>
 				<div class="modal-body p-0">
 					<div class="media flex-column flex-md-row theme-bg-light p-4 p-lg-5">
-						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto" src="assets/images/speakers/samudravijay k.jpg" alt="" />
-						
+						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto"
+							src="assets/images/speakers/samudravijay k.jpg" alt="" />
+
 						<div class="media-body text-center text-md-left mx-auto">
 							<h2 class="name mb-2">Dr. Samudra Vijaya K</h2>
 							<div class="meta">Visiting Faculty</div>
 							<div class="meta mb-2"> IIT Guwahati</div>
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list--> 
-						</div><!--//media-body-->
-					</div><!--//media-->
-					
-					<div class="desc p-4 p-lg-5">
-						<p style="text-align: justify;">Dr. Samudra Vijaya K., currently the visiting Faculty at Center for Linguistic Science and Technology it IIT Guwahati, has been the scientific officer at TIFR, Mumbai and project leader at  Speaker verification lab, Aum Systems Inc., New Brunswick, NJ, USA.  </p>
-						<p class="mb-0" style="text-align: justify;">Donec neque magna, molestie vel varius ut, pretium a urna. Pellentesque placerat nunc eu condimentum pellentesque. Vivamus dictum nisl leo, id fermentum lectus porttitor et. Pellentesque tristique erat libero, condimentum porttitor nisl pharetra et.</p>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
+						</div>
+						<!--//media-body-->
 					</div>
-				</div><!--//modal-body-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
+					<!--//media-->
+
+					<div class="desc p-4 p-lg-5">
+						<p style="text-align: justify;">Dr. Samudra Vijaya K., currently the visiting Faculty at Center
+							for Linguistic Science and Technology it IIT Guwahati, has been the scientific officer at
+							TIFR, Mumbai and project leader at Speaker verification lab, Aum Systems Inc., New
+							Brunswick, NJ, USA. </p>
+						<p class="mb-0" style="text-align: justify;">Donec neque magna, molestie vel varius ut, pretium
+							a urna. Pellentesque placerat nunc eu condimentum pellentesque. Vivamus dictum nisl leo, id
+							fermentum lectus porttitor et. Pellentesque tristique erat libero, condimentum porttitor
+							nisl pharetra et.</p>
+					</div>
+				</div>
+				<!--//modal-body-->
+			</div>
+			<!--//modal-content-->
+		</div>
+		<!--//modal-dialog-->
+	</div>
+	<!--//modal-->
 
 	<!-- Modal Speaker -->
-	<div class="modal modal-speaker modal-speaker-3" id="modal-speaker-3" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+	<div class="modal modal-speaker modal-speaker-3" id="modal-speaker-3" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -1505,31 +2044,56 @@
 				</div>
 				<div class="modal-body p-0">
 					<div class="media flex-column flex-md-row theme-bg-light p-4 p-lg-5">
-						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto" src="assets/images/speakers/maxresdefault.jpg" alt=""  />
-						
+						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto"
+							src="assets/images/speakers/maxresdefault.jpg" alt="" />
+
 						<div class="media-body text-center text-md-left mx-auto">
 							<h2 class="name mb-2">Dr. Arun Sharma</h2>
 							<div class="meta"> Professor and Head - Department of AI and Data Sciences</div>
 							<div class="meta mb-2">IGDTUW</div>
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list--> 
-						</div><!--//media-body-->
-					</div><!--//media-->
-					
-					<div class="desc p-4 p-lg-5">
-						<p style="text-align: justify;">Dr. Arun Sharma, is presently Professor and Head of the AI and Data Sciences Department. He is also the Managing director of IGDTUW Anvenshan Foundation and NIRF, IQAC and Accreditation. He completed his PhD Degree from Thapar University, Patiala in 2009. Prior to this, he did M.Sc. (Applied Mathematics) from University of Roorkee (now IIT Roorkee) in 1994 and M. Tech. (CSE) from Punjabi University, Patiala in 1997. He has a vast teaching experience of approx 20 years in various reputed Govt. and Pvt. Institutions. His areas of interests include Big Data, Data Mining, Software Engineering and Soft Computing Approaches. He has published more than 60 papers (SCI/SCIE/SCOPUS and others) in international journals and conferences including IEEE, ACM, Springer, Elsevier, Wiley, IGI Global and several others. Dr. Sharma is a Senior Member of IEEE and Life Member of Computer Society of India and is actively involved in various activities of these societies. </p>
-						<p class="mb-0" style="text-align: justify;">He has been the Chairman of Computer Society of India (CSI) - Ghaziabad Chapter for 2015-16. He has been awarded by CSI in its annual convention for his significant contribution. Dr Sharma was included in World’s Who’s Who by Marquis, USA in 2013. He is also on the panel of Experts and member of Board of Studies for various reputed Universities and institutions.</p>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
+						</div>
+						<!--//media-body-->
 					</div>
-				</div><!--//modal-body-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
+					<!--//media-->
+
+					<div class="desc p-4 p-lg-5">
+						<p style="text-align: justify;">Dr. Arun Sharma, is presently Professor and Head of the AI and
+							Data Sciences Department. He is also the Managing director of IGDTUW Anvenshan Foundation
+							and NIRF, IQAC and Accreditation. He completed his PhD Degree from Thapar University,
+							Patiala in 2009. Prior to this, he did M.Sc. (Applied Mathematics) from University of
+							Roorkee (now IIT Roorkee) in 1994 and M. Tech. (CSE) from Punjabi University, Patiala in
+							1997. He has a vast teaching experience of approx 20 years in various reputed Govt. and Pvt.
+							Institutions. His areas of interests include Big Data, Data Mining, Software Engineering and
+							Soft Computing Approaches. He has published more than 60 papers (SCI/SCIE/SCOPUS and others)
+							in international journals and conferences including IEEE, ACM, Springer, Elsevier, Wiley,
+							IGI Global and several others. Dr. Sharma is a Senior Member of IEEE and Life Member of
+							Computer Society of India and is actively involved in various activities of these societies.
+						</p>
+						<p class="mb-0" style="text-align: justify;">He has been the Chairman of Computer Society of
+							India (CSI) - Ghaziabad Chapter for 2015-16. He has been awarded by CSI in its annual
+							convention for his significant contribution. Dr Sharma was included in World’s Who’s Who by
+							Marquis, USA in 2013. He is also on the panel of Experts and member of Board of Studies for
+							various reputed Universities and institutions.</p>
+					</div>
+				</div>
+				<!--//modal-body-->
+			</div>
+			<!--//modal-content-->
+		</div>
+		<!--//modal-dialog-->
+	</div>
+	<!--//modal-->
 
 	<!-- Modal Speaker -->
-	<div class="modal modal-speaker modal-speaker-4" id="modal-speaker-4" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+	<div class="modal modal-speaker modal-speaker-4" id="modal-speaker-4" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -1538,31 +2102,65 @@
 				</div>
 				<div class="modal-body p-0">
 					<div class="media flex-column flex-md-row theme-bg-light p-4 p-lg-5">
-						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto" src="assets/images/speakers/S Sakti, NAIST Japan.jpg" alt="" />
-						
+						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto"
+							src="assets/images/speakers/S Sakti, NAIST Japan.jpg" alt="" />
+
 						<div class="media-body text-center text-md-left mx-auto">
 							<h2 class="name mb-2">Dr. S Sakti</h2>
 							<div class="meta">Research Associate Professor</div>
 							<div class="meta mb-2">NAIST</div>
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list--> 
-						</div><!--//media-body-->
-					</div><!--//media-->
-					
-					<div class="desc p-4 p-lg-5">
-						<p style="text-align: justify;">Sakriani Sakti (Member, IEEE) received the B.E. degree in informatics (cum laude) from the Bandung Institute of Technology, Bandung, Indonesia, in 1999. In 2000, she was the recipient of the DAAD-Siemens Program Asia 21st Century Award to study communication technology at the University of Ulm, Ulm, Germany, where she received the M.Sc. degree in 2002. During her thesis work, she worked with the Speech Understanding Department, the DaimlerChrysler Research Center, Ulm. Between 2003 and 2009, she worked as a Researcher with the ATR SLC Labs, Kyoto, Japan, and from 2006 to 2011, as an Expert Researcher with the NICT SLC Groups, Japan. While working with ATR and NICT, she continued her study from 2005 to 2008 with the Dialog Systems Group, University of Ulm and received the Ph.D. degree in 2008. She has been actively involved in such collaboration activities as the Asian Pacific Telecommunity Project from 2003 to 2007 and ASTAR and USTAR from 2006 to 2011. From 2009 to 2011, she was a Visiting Professor with the Computer Science Department, University of Indonesia, Depok, Indonesia. From 2011, she has been an Assistant Professor with the Augmented Human Communication Laboratory, NAIST, Japan. She was also a Visiting Scientific Researcher of INRIA Paris Rocquencourt, France from 2015 to 2016, under the ‘JSPS Strategic Young Researcher Overseas Visits Program for Accelerating Brain Circulation. </p>
-						<p class="mb-0" style="text-align: justify;">Since January 2018, she serves as a Research Associate Professor at NAIST and a Research Scientist at RIKEN AIP, Japan. She is a Member of JNS, SFN, ASJ, ISCA, IEICE, and IEEE. Furthermore, she is currently a Committee Member of IEEE SLTC (2021-2023) and an Associate Editor of the IEEE/ACM Transactions on Audio, Speech, and Language Processing (2020-2023). She is also the officer of ELRA/ISCA Special Interest Group on Under-resourced Languages (SIGUL) and a Board Member of Spoken Language Technologies for Under-Resourced Languages (SLTU). Her research interests include statistical pattern recognition, graphical modeling framework, deep learning, multilingual speech recognition and synthesis, spoken language translation, affective dialog system, and cognitive-communication.</p>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
+						</div>
+						<!--//media-body-->
 					</div>
-				</div><!--//modal-body-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
+					<!--//media-->
+
+					<div class="desc p-4 p-lg-5">
+						<p style="text-align: justify;">Sakriani Sakti (Member, IEEE) received the B.E. degree in
+							informatics (cum laude) from the Bandung Institute of Technology, Bandung, Indonesia, in
+							1999. In 2000, she was the recipient of the DAAD-Siemens Program Asia 21st Century Award to
+							study communication technology at the University of Ulm, Ulm, Germany, where she received
+							the M.Sc. degree in 2002. During her thesis work, she worked with the Speech Understanding
+							Department, the DaimlerChrysler Research Center, Ulm. Between 2003 and 2009, she worked as a
+							Researcher with the ATR SLC Labs, Kyoto, Japan, and from 2006 to 2011, as an Expert
+							Researcher with the NICT SLC Groups, Japan. While working with ATR and NICT, she continued
+							her study from 2005 to 2008 with the Dialog Systems Group, University of Ulm and received
+							the Ph.D. degree in 2008. She has been actively involved in such collaboration activities as
+							the Asian Pacific Telecommunity Project from 2003 to 2007 and ASTAR and USTAR from 2006 to
+							2011. From 2009 to 2011, she was a Visiting Professor with the Computer Science Department,
+							University of Indonesia, Depok, Indonesia. From 2011, she has been an Assistant Professor
+							with the Augmented Human Communication Laboratory, NAIST, Japan. She was also a Visiting
+							Scientific Researcher of INRIA Paris Rocquencourt, France from 2015 to 2016, under the ‘JSPS
+							Strategic Young Researcher Overseas Visits Program for Accelerating Brain Circulation. </p>
+						<p class="mb-0" style="text-align: justify;">Since January 2018, she serves as a Research
+							Associate Professor at NAIST and a Research Scientist at RIKEN AIP, Japan. She is a Member
+							of JNS, SFN, ASJ, ISCA, IEICE, and IEEE. Furthermore, she is currently a Committee Member of
+							IEEE SLTC (2021-2023) and an Associate Editor of the IEEE/ACM Transactions on Audio, Speech,
+							and Language Processing (2020-2023). She is also the officer of ELRA/ISCA Special Interest
+							Group on Under-resourced Languages (SIGUL) and a Board Member of Spoken Language
+							Technologies for Under-Resourced Languages (SLTU). Her research interests include
+							statistical pattern recognition, graphical modeling framework, deep learning, multilingual
+							speech recognition and synthesis, spoken language translation, affective dialog system, and
+							cognitive-communication.</p>
+					</div>
+				</div>
+				<!--//modal-body-->
+			</div>
+			<!--//modal-content-->
+		</div>
+		<!--//modal-dialog-->
+	</div>
+	<!--//modal-->
 
 	<!-- Modal Speaker -->
-	<div class="modal modal-speaker modal-speaker-5" id="modal-speaker-5" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+	<div class="modal modal-speaker modal-speaker-5" id="modal-speaker-5" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -1571,31 +2169,51 @@
 				</div>
 				<div class="modal-body p-0">
 					<div class="media flex-column flex-md-row theme-bg-light p-4 p-lg-5">
-						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto" src="assets/images/speakers/220px-Syed_Akhter_Hossain.jpg" alt="" />
-						
+						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto"
+							src="assets/images/speakers/220px-Syed_Akhter_Hossain.jpg" alt="" />
+
 						<div class="media-body text-center text-md-left mx-auto">
 							<h2 class="name mb-2">Dr. Syed Akhter Hossain</h2>
 							<div class="meta"> professor and head of Computer Science and Engineering </div>
 							<div class="meta mb-2">ULAB</div>
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list--> 
-						</div><!--//media-body-->
-					</div><!--//media-->
-					
-					<div class="desc p-4 p-lg-5">
-						<p style="text-align: justify;">Syed Akhter Hossain (born 1969) is a computer scientist, educator,[1][2] columnist[3] and technology consultant[4] from Bangladesh. Currently he is a professor and head of Computer Science and Engineering department at University of Liberal Arts Bangladesh (ULAB). </p>
-						<p class="mb-0" style="text-align: justify;">Hossain is a contest director of ACM-ICPC Dhaka Regionals 2007, 2012 and Chief Judge of National Collegiate Programming Contest in Bangladesh 2015 and Contest Director of NCPC 2014. He is also the Chief Judge of ACM ICPC Dhaka Site 2015 and one of the pioneers of spreading programming education in Bangladesh by organising Computer Science Education Week and NGPC(National Girls Programming Contest). He is also an organising committee member of ICCIT (International Conference on Computer and Information Technology) at 2013, and hold the chair on 2014. He is also taking steps to enrich Bengali language content.</p>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
+						</div>
+						<!--//media-body-->
 					</div>
-				</div><!--//modal-body-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
+					<!--//media-->
+
+					<div class="desc p-4 p-lg-5">
+						<p style="text-align: justify;">Syed Akhter Hossain (born 1969) is a computer scientist,
+							educator,[1][2] columnist[3] and technology consultant[4] from Bangladesh. Currently he is a
+							professor and head of Computer Science and Engineering department at University of Liberal
+							Arts Bangladesh (ULAB). </p>
+						<p class="mb-0" style="text-align: justify;">Hossain is a contest director of ACM-ICPC Dhaka
+							Regionals 2007, 2012 and Chief Judge of National Collegiate Programming Contest in
+							Bangladesh 2015 and Contest Director of NCPC 2014. He is also the Chief Judge of ACM ICPC
+							Dhaka Site 2015 and one of the pioneers of spreading programming education in Bangladesh by
+							organising Computer Science Education Week and NGPC(National Girls Programming Contest). He
+							is also an organising committee member of ICCIT (International Conference on Computer and
+							Information Technology) at 2013, and hold the chair on 2014. He is also taking steps to
+							enrich Bengali language content.</p>
+					</div>
+				</div>
+				<!--//modal-body-->
+			</div>
+			<!--//modal-content-->
+		</div>
+		<!--//modal-dialog-->
+	</div>
+	<!--//modal-->
 
 	<!-- Modal Speaker -->
-	<div class="modal modal-speaker modal-speaker-6" id="modal-speaker-6" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+	<div class="modal modal-speaker modal-speaker-6" id="modal-speaker-6" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -1604,31 +2222,49 @@
 				</div>
 				<div class="modal-body p-0">
 					<div class="media flex-column flex-md-row theme-bg-light p-4 p-lg-5">
-						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto" src="assets/images/speakers/speaker-6.jpg" alt="" />
-						
+						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto"
+							src="assets/images/speakers/speaker-6.jpg" alt="" />
+
 						<div class="media-body text-center text-md-left mx-auto">
 							<h2 class="name mb-2">Speaker Name</h2>
 							<div class="meta">Job Title Or Position</div>
 							<div class="meta mb-2">Company Or Organization</div>
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list--> 
-						</div><!--//media-body-->
-					</div><!--//media-->
-					
-					<div class="desc p-4 p-lg-5">
-						<p>You can put speaker's bio or talk related info here. Duis a mi quis metus porttitor eleifend. Pellentesque finibus ultrices imperdiet. Maecenas auctor tortor quis risus tincidunt, mattis mattis leo placerat. Fusce metus augue, sagittis eget enim vel, venenatis auctor est. In interdum felis massa, ac porta nunc pretium non. In fringilla orci vitae imperdiet malesuada. Vestibulum feugiat lobortis est, in sagittis nisi molestie vel. Mauris ultrices vitae lectus eu feugiat. Fusce semper, nisi at placerat mollis, augue elit pretium enim, eu pellentesque justo purus et lectus. </p>
-						<p class="mb-0">Donec neque magna, molestie vel varius ut, pretium a urna. Pellentesque placerat nunc eu condimentum pellentesque. Vivamus dictum nisl leo, id fermentum lectus porttitor et. Pellentesque tristique erat libero, condimentum porttitor nisl pharetra et.</p>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
+						</div>
+						<!--//media-body-->
 					</div>
-				</div><!--//modal-body-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
+					<!--//media-->
+
+					<div class="desc p-4 p-lg-5">
+						<p>You can put speaker's bio or talk related info here. Duis a mi quis metus porttitor eleifend.
+							Pellentesque finibus ultrices imperdiet. Maecenas auctor tortor quis risus tincidunt, mattis
+							mattis leo placerat. Fusce metus augue, sagittis eget enim vel, venenatis auctor est. In
+							interdum felis massa, ac porta nunc pretium non. In fringilla orci vitae imperdiet
+							malesuada. Vestibulum feugiat lobortis est, in sagittis nisi molestie vel. Mauris ultrices
+							vitae lectus eu feugiat. Fusce semper, nisi at placerat mollis, augue elit pretium enim, eu
+							pellentesque justo purus et lectus. </p>
+						<p class="mb-0">Donec neque magna, molestie vel varius ut, pretium a urna. Pellentesque placerat
+							nunc eu condimentum pellentesque. Vivamus dictum nisl leo, id fermentum lectus porttitor et.
+							Pellentesque tristique erat libero, condimentum porttitor nisl pharetra et.</p>
+					</div>
+				</div>
+				<!--//modal-body-->
+			</div>
+			<!--//modal-content-->
+		</div>
+		<!--//modal-dialog-->
+	</div>
+	<!--//modal-->
 
 	<!-- Modal Speaker -->
-	<div class="modal modal-speaker modal-speaker-7" id="modal-speaker-7" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+	<div class="modal modal-speaker modal-speaker-7" id="modal-speaker-7" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -1637,31 +2273,49 @@
 				</div>
 				<div class="modal-body p-0">
 					<div class="media flex-column flex-md-row theme-bg-light p-4 p-lg-5">
-						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto" src="assets/images/speakers/speaker-7.jpg" alt="" />
-						
+						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto"
+							src="assets/images/speakers/speaker-7.jpg" alt="" />
+
 						<div class="media-body text-center text-md-left mx-auto">
 							<h2 class="name mb-2">Speaker Name</h2>
 							<div class="meta">Job Title Or Position</div>
 							<div class="meta mb-2">Company Or Organization</div>
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list--> 
-						</div><!--//media-body-->
-					</div><!--//media-->
-					
-					<div class="desc p-4 p-lg-5">
-						<p>You can put speaker's bio or talk related info here. Duis a mi quis metus porttitor eleifend. Pellentesque finibus ultrices imperdiet. Maecenas auctor tortor quis risus tincidunt, mattis mattis leo placerat. Fusce metus augue, sagittis eget enim vel, venenatis auctor est. In interdum felis massa, ac porta nunc pretium non. In fringilla orci vitae imperdiet malesuada. Vestibulum feugiat lobortis est, in sagittis nisi molestie vel. Mauris ultrices vitae lectus eu feugiat. Fusce semper, nisi at placerat mollis, augue elit pretium enim, eu pellentesque justo purus et lectus. </p>
-						<p class="mb-0">Donec neque magna, molestie vel varius ut, pretium a urna. Pellentesque placerat nunc eu condimentum pellentesque. Vivamus dictum nisl leo, id fermentum lectus porttitor et. Pellentesque tristique erat libero, condimentum porttitor nisl pharetra et.</p>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
+						</div>
+						<!--//media-body-->
 					</div>
-				</div><!--//modal-body-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
+					<!--//media-->
+
+					<div class="desc p-4 p-lg-5">
+						<p>You can put speaker's bio or talk related info here. Duis a mi quis metus porttitor eleifend.
+							Pellentesque finibus ultrices imperdiet. Maecenas auctor tortor quis risus tincidunt, mattis
+							mattis leo placerat. Fusce metus augue, sagittis eget enim vel, venenatis auctor est. In
+							interdum felis massa, ac porta nunc pretium non. In fringilla orci vitae imperdiet
+							malesuada. Vestibulum feugiat lobortis est, in sagittis nisi molestie vel. Mauris ultrices
+							vitae lectus eu feugiat. Fusce semper, nisi at placerat mollis, augue elit pretium enim, eu
+							pellentesque justo purus et lectus. </p>
+						<p class="mb-0">Donec neque magna, molestie vel varius ut, pretium a urna. Pellentesque placerat
+							nunc eu condimentum pellentesque. Vivamus dictum nisl leo, id fermentum lectus porttitor et.
+							Pellentesque tristique erat libero, condimentum porttitor nisl pharetra et.</p>
+					</div>
+				</div>
+				<!--//modal-body-->
+			</div>
+			<!--//modal-content-->
+		</div>
+		<!--//modal-dialog-->
+	</div>
+	<!--//modal-->
 
 	<!-- Modal Speaker -->
-	<div class="modal modal-speaker modal-speaker-8" id="modal-speaker-8" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+	<div class="modal modal-speaker modal-speaker-8" id="modal-speaker-8" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -1670,51 +2324,68 @@
 				</div>
 				<div class="modal-body p-0">
 					<div class="media flex-column flex-md-row theme-bg-light p-4 p-lg-5">
-						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto" src="assets/images/speakers/speaker-8.jpg" alt="" />
-						
+						<img class="profile-image mb-3 mb-md-0 mr-md-4 rounded-circle mx-auto"
+							src="assets/images/speakers/speaker-8.jpg" alt="" />
+
 						<div class="media-body text-center text-md-left mx-auto">
 							<h2 class="name mb-2">Speaker Name</h2>
 							<div class="meta">Job Title Or Position</div>
 							<div class="meta mb-2">Company Or Organization</div>
 							<ul class="social-list list-inline mb-0">
-								<li class="list-inline-item"><a  href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-								
-							</ul><!--//social-list--> 
-						</div><!--//media-body-->
-					</div><!--//media-->
-					
-					<div class="desc p-4 p-lg-5">
-						<p>You can put speaker's bio or talk related info here. Duis a mi quis metus porttitor eleifend. Pellentesque finibus ultrices imperdiet. Maecenas auctor tortor quis risus tincidunt, mattis mattis leo placerat. Fusce metus augue, sagittis eget enim vel, venenatis auctor est. In interdum felis massa, ac porta nunc pretium non. In fringilla orci vitae imperdiet malesuada. Vestibulum feugiat lobortis est, in sagittis nisi molestie vel. Mauris ultrices vitae lectus eu feugiat. Fusce semper, nisi at placerat mollis, augue elit pretium enim, eu pellentesque justo purus et lectus. </p>
-						<p class="mb-0">Donec neque magna, molestie vel varius ut, pretium a urna. Pellentesque placerat nunc eu condimentum pellentesque. Vivamus dictum nisl leo, id fermentum lectus porttitor et. Pellentesque tristique erat libero, condimentum porttitor nisl pharetra et.</p>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+								</li>
+
+							</ul>
+							<!--//social-list-->
+						</div>
+						<!--//media-body-->
 					</div>
-				</div><!--//modal-body-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
-	
+					<!--//media-->
 
-	
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/superfish/superfish.min.js"></script>
-  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+					<div class="desc p-4 p-lg-5">
+						<p>You can put speaker's bio or talk related info here. Duis a mi quis metus porttitor eleifend.
+							Pellentesque finibus ultrices imperdiet. Maecenas auctor tortor quis risus tincidunt, mattis
+							mattis leo placerat. Fusce metus augue, sagittis eget enim vel, venenatis auctor est. In
+							interdum felis massa, ac porta nunc pretium non. In fringilla orci vitae imperdiet
+							malesuada. Vestibulum feugiat lobortis est, in sagittis nisi molestie vel. Mauris ultrices
+							vitae lectus eu feugiat. Fusce semper, nisi at placerat mollis, augue elit pretium enim, eu
+							pellentesque justo purus et lectus. </p>
+						<p class="mb-0">Donec neque magna, molestie vel varius ut, pretium a urna. Pellentesque placerat
+							nunc eu condimentum pellentesque. Vivamus dictum nisl leo, id fermentum lectus porttitor et.
+							Pellentesque tristique erat libero, condimentum porttitor nisl pharetra et.</p>
+					</div>
+				</div>
+				<!--//modal-body-->
+			</div>
+			<!--//modal-content-->
+		</div>
+		<!--//modal-dialog-->
+	</div>
+	<!--//modal-->
 
-	<!-- Javascript -->          
+
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/venobox/venobox.min.js"></script>
+	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="assets/vendor/superfish/superfish.min.js"></script>
+	<script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+
+	<!-- Javascript -->
 	<script src="assets/plugins/jquery-3.4.1.min.js"></script>
 	<script src="assets/plugins/popper.min.js"></script>
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/plugins/back-to-top.js"></script>
 	<script src="assets/plugins/jquery.scrollTo.min.js"></script>
-	<script src="assets/js/main.js"></script>  
+	<script src="assets/js/main.js"></script>
 
 
 </body>
-</html> 
 
+</html>
