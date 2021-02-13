@@ -279,6 +279,7 @@
 	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="sweetalert.css"
 
 	<!-- FontAwesome JS-->
 	<script defer src="assets/fontawesome/js/all.min.js"></script>
@@ -304,7 +305,7 @@
 	<header id="header" class="header fixed-top">
 		<div class="branding">
 			<div class="container-fluid">
-				<nav class="main-nav navbar navbar-expand-lg">
+				<nav class="main-nav navbar navbar-expand-lg" >
 					<div class="site-logo"><a class="scrollto" href="#hero-block"><img width="150px"
 								src="assets/images/AIST-2021.svg" alt="logo"></a></div>
 					<!-- <div class="navbar-btn order-lg-2"><a class="scrollto" href="#hero-block"><img class="fas fa-award fa-5x" src="assets/images/logo-white.png" alt="logo"></a></div>     -->
@@ -319,18 +320,18 @@
 					<div id="navigation" class="navbar-collapse collapse  justify-content-lg-end mr-lg-3">
 						<ul class="nav navbar-nav">
 
-							<li class="nav-item"><a class="nav-link scrollto" href="#hero-block">Home</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#about-section">About</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#callForPapers">Call for Papers</a>
+							<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large;color: #fff;"><a class="nav-link scrollto" href="#hero-block">Home</a></li>
+							<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large; color: #fff;"><a class="nav-link scrollto" href="#about-section">About</a></li>
+							<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large;"><a class="nav-link scrollto" href="#callForPapers">Call for Papers</a>
 							</li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#speakers-section">Speakers</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#schedule-section">Schedule</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#departments">Committe</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#register-section">Register</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#contact">Contact</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#section">AIST2020</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#">Author Guidelines</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="">Download-Schedule</a></li>
+							<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large;color: #fff"><a class="nav-link scrollto" href="#container-speakers-section" id="spk">Speakers</a></li>
+							<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large;color: #fff"><a class="nav-link scrollto" href="#container-schedule-section">Schedule</a></li>
+							<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large;color: #fff"><a class="nav-link scrollto" href="#container-departments">Committee</a></li>
+							<!--//<li class="nav-item"><a class="nav-link scrollto" href="#register-section">Register</a></li>-->
+							<!--//<li class="nav-item"><a class="nav-link scrollto" href="#contact">Contact</a></li>-->
+							<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large;color: #fff"><a class="nav-link scrollto" href="#section">AIST2020</a></li>
+							<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large;color: #fff"><a class="nav-link scrollto" href="#" onclick="myFunction()" >Author Guidelines</a></li>
+							<!--//<li class="nav-item" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: x-large;color: #fff"><a class="nav-link scrollto" href="">Download-Schedule</a></li>-->
 						</ul>
 						<!--//nav-->
 					</div>
@@ -366,9 +367,9 @@
 				<h1 class="hero-heading mb-2">AIST 2021</h1>
 				<!-- <div class="hero-meta mb-3"><i class="far fa-calendar-alt mr-2"></i>12 - 15 Oct <i class="fas fa-map-marker-alt mx-2"></i>New Delhi, India</div> -->
 				<div class="hero-intro mb-4">Artificial Intelligence & Speech Technology <br></div><br>
-				<div class="hero-meta mb-3"><i class="far fa-calendar-alt mr-2"></i>12 - 15 Oct <i
+				<div class="hero-meta mb-3"><i class="far fa-calendar-alt mr-2"></i>12 - 13 Nov <i
 						class="fas fa-map-marker-alt mx-2"></i>New Delhi, India</div>
-				<div class="hero-cta"><a class="btn btn-primary btn-lg" href="" target="_blank">Submit your Paper</a>
+				<div class="hero-cta"><a class="btn btn-primary btn-lg" href="" target="_blank" style="background-color: #f82249;" onclick="myFunction()">Submit your Paper</a>
 				</div>
 
 			</div>
@@ -487,7 +488,7 @@
 		</div>
 		<!--//event-countdown-->
 		<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5"
-				style="background-color: #098dcf;" href="" target="_blank">Register Today</a></div>
+				style="background-color: #098dcf;" href="" target="_blank"  onclick="myFunction()">Register Today</a></div>
 
 
 		<div class="container" id="callForPapers">
@@ -883,7 +884,7 @@
 		<!--tickets (Call for Papers)-->
 
 
-
+		<!--Speaker
 		<div class="media-block theme-bg-primary py-5">
 
 			<div class="container">
@@ -899,26 +900,30 @@
 								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen></iframe>
 						</div>
-						<!--//embed-responsive -->
+						embed-responsive 
 					</div>
-					<!--//col-->
+					col
 					<div class="col-12 col-md-6 mb-md-5">
 						<div class="embed-responsive embed-responsive-16by9">
-							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wE4cZbP2t1I"
+							<iframe class="embed-responsive-item" src="https:www.youtube.com/embed/wE4cZbP2t1I"
 								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen></iframe>
 						</div>
-						<!--//embed-responsive -->
+						embed-responsive 
 					</div>
-					<!--//col-->
+					col
 				</div>
-				<!--//row-->
+				row
 			</div>
-			<!--//container-->
+			container
 		</div>
-		<!--//media-block-->
+		media-block
 	</section>
-	<!--//about-section-->
+	about-section-->
+	
+	<div class="container" id="container-speakers-section">
+		<p><br><br><br></p>
+	</div>
 
 	<section id="speakers-section" class="speakers-section section">
 		<div class="container">
@@ -926,6 +931,8 @@
 			<h3 class="section-heading text-center mb-3">Speakers</h3>
 			<div class="section-intro text-center single-col-max mx-auto mb-5">Our featured speakers. You can connect
 				with them on social media or send an e-mail.</div>
+			<h1 class="section-heading text-center mb-3"  style=" color: #414040;">To Be Updated Soon...</h1>
+			<!--//
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
@@ -937,11 +944,11 @@
 								<div class="meta">Vice Chancellor</div>
 								<div class="meta">IGDTUW</div>
 							</div>
-							<!--//card-text-->
+							<!--//card-text
 							<a href="#modal-speaker-1" data-toggle="modal" data-target="#modal-speaker-1">Read more
 								&rarr;</a>
 						</div>
-						<!--//card-->
+						<!--//card
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								<li class="list-inline-item"><a href="vc@igdtuw.ac.in"><i class="fa fa-envelope fa-fw"></i></a></li>
@@ -950,12 +957,12 @@
 											class="fab fa-linkedin-in fa-fw"></i></a></li>
 
 							</ul>
-							<!--//social-list-->
+							<!--//social-list
 						</div>
 					</div>
-					<!--//card-->
+					<!--//card
 				</div>
-				<!--//col-->
+				<!--//col
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
 						<a href="#modal-speaker-2" data-toggle="modal" data-target="#modal-speaker-2"><img
@@ -967,11 +974,11 @@
 								<div class="meta">Visiting Faculty </div>
 								<div class="meta">IIT Guwahati</div>
 							</div>
-							<!--//card-text-->
+							<!--//card-text
 							<a href="#modal-speaker-2" data-toggle="modal" data-target="#modal-speaker-2">Read more
 								&rarr;</a>
 						</div>
-						<!--//card-->
+						<!--//card
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
@@ -979,12 +986,12 @@
 								</li>
 
 							</ul>
-							<!--//social-list-->
+							<!--//social-list
 						</div>
 					</div>
-					<!--//card-->
+					<!--//card
 				</div>
-				<!--//col-->
+				<!--//col
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
 						<a href="#modal-speaker-3" data-toggle="modal" data-target="#modal-speaker-3"><img
@@ -996,11 +1003,11 @@
 								<div class="meta"> Dean </div>
 								<div class="meta">IGDTUW</div>
 							</div>
-							<!--//card-text-->
+							<!--//card-text
 							<a href="#modal-speaker-3" data-toggle="modal" data-target="#modal-speaker-3">Read more
 								&rarr;</a>
 						</div>
-						<!--//card-->
+						<!--//card
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								<li class="list-inline-item"><a href="arunsharma@igdtuw.ac.in"><i class="fa fa-envelope fa-fw"></i></a></li>
@@ -1008,12 +1015,12 @@
 								</li>
 
 							</ul>
-							<!--//social-list-->
+							<!--//social-list
 						</div>
 					</div>
-					<!--//card-->
+					<!--//card
 				</div>
-				<!--//col-->
+				<!--//col
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
 						<a href="#modal-speaker-4" data-toggle="modal" data-target="#modal-speaker-4"><img
@@ -1025,11 +1032,11 @@
 								<div class="meta">Professor</div>
 								<div class="meta">NAIST</div>
 							</div>
-							<!--//card-text-->
+							<!--//card-text
 							<a href="#modal-speaker-4" data-toggle="modal" data-target="#modal-speaker-4">Read more
 								&rarr;</a>
 						</div>
-						<!--//card-->
+						<!--//card
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
@@ -1037,12 +1044,12 @@
 								</li>
 
 							</ul>
-							<!--//social-list-->
+							<!--//social-list
 						</div>
 					</div>
-					<!--//card-->
+					<!--//card
 				</div>
-				<!--//col-->
+				<!--//col
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
 						<a href="#modal-speaker-5" data-toggle="modal" data-target="#modal-speaker-5"><img
@@ -1054,11 +1061,11 @@
 								<div class="meta">Professor</div>
 								<div class="meta">ULAB</div>
 							</div>
-							<!--//card-text-->
+							<!--//card-text
 							<a href="#modal-speaker-5" data-toggle="modal" data-target="#modal-speaker-5">Read more
 								&rarr;</a>
 						</div>
-						<!--//card-->
+						<!--//card
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								<li class="list-inline-item"><a href="aktarhossain@daffodilvarsity.edu.bd"><i class="fa fa-envelope fa-fw"></i></a></li>
@@ -1066,12 +1073,12 @@
 								</li>
 
 							</ul>
-							<!--//social-list-->
+							<!--//social-list
 						</div>
 					</div>
-					<!--//card-->
+					<!--//card
 				</div>
-				<!--//col-->
+				<!--//col
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
 						<a href="#modal-speaker-6" data-toggle="modal" data-target="#modal-speaker-6"><img
@@ -1082,11 +1089,11 @@
 								<div class="meta">Senior Software Engineer</div>
 								<div class="meta">Twitter</div>
 							</div>
-							<!--//card-text-->
+							<!--//card-text
 							<a href="#modal-speaker-6" data-toggle="modal" data-target="#modal-speaker-6">Read more
 								&rarr;</a>
 						</div>
-						<!--//card-->
+						<!--//card
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
@@ -1094,12 +1101,12 @@
 								</li>
 
 							</ul>
-							<!--//social-list-->
+							<!--//social-list
 						</div>
 					</div>
-					<!--//card-->
+					<!--//card
 				</div>
-				<!--//col-->
+				<!--//col
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
 						<a href="#modal-speaker-7" data-toggle="modal" data-target="#modal-speaker-7"><img
@@ -1110,11 +1117,11 @@
 								<div class="meta">Senior Software Developer</div>
 								<div class="meta">Facebook</div>
 							</div>
-							<!--//card-text-->
+							<!--//card-text
 							<a href="#modal-speaker-7" data-toggle="modal" data-target="#modal-speaker-7">Read more
 								&rarr;</a>
 						</div>
-						<!--//card-->
+						<!--//card
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
@@ -1122,12 +1129,12 @@
 								</li>
 
 							</ul>
-							<!--//social-list-->
+							<!--//social-list
 						</div>
 					</div>
-					<!--//card-->
+					<!--//card
 				</div>
-				<!--//col-->
+				<!--//col
 				<div class="col-12 col-md-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
 						<a href="#modal-speaker-8" data-toggle="modal" data-target="#modal-speaker-8"><img
@@ -1138,11 +1145,11 @@
 								<div class="meta">Lead Developer</div>
 								<div class="meta">Microsoft</div>
 							</div>
-							<!--//card-text-->
+							<!--//card-text
 							<a href="#modal-speaker-8" data-toggle="modal" data-target="#modal-speaker-8">Read more
 								&rarr;</a>
 						</div>
-						<!--//card-->
+						<!--//card
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								<li class="list-inline-item"><a href="#"><i class="fa fa-envelope fa-fw"></i></a></li>
@@ -1150,12 +1157,12 @@
 								</li>
 
 							</ul>
-							<!--//social-list-->
+							<!--//social-list
 						</div>
 					</div>
-					<!--//card-->
+					<!--//card
 				</div>
-				<!--//col-->
+				<!--//col
 			</div>
 			<!--//row-->
 
@@ -1165,8 +1172,10 @@
 	</section>
 	<!--//speakers-section-->
 
-	<div class="container">
-		<hr>
+    
+
+	<div class="container" id="container-schedule-section">
+		<p><br><br><br></p>
 	</div>
 
 	<section id="schedule-section" class="schedule-section section">
@@ -1294,16 +1303,18 @@
 
 				<div class="schedule-cta text-center mx-auto"><a href=""
 						class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0"
-						target="_blank">Download Schedule</a><a href=""
+						target="_blank" onclick="myFunction()">Download Schedule</a><a href=""
 						class="btn btn-primary btn-lg mr-md-2 d-block d-md-inline-block mb-3 mb-md-0"
-						target="_blank">Author Guidelines</a></div>
+						target="_blank"onclick="myFunction()" >Author Guidelines</a></div>
 			</div>
 			<!--//container-->
 	</section>
 	<!--//schedule-section-->
-	<div class="container">
-		<hr>
+	
+	<div class="container" id="container-departments">
+		<p><br><br><br><br></p>
 	</div>
+
 	<!-- ======= Departments Section ======= -->
 	<section id="departments" class="departments">
 		<div class="container">
@@ -1321,126 +1332,120 @@
 							<a class="nav-link" data-toggle="tab" href="#tab-3">Steering Committee</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#tab-4">Technical Program Committee</a>
+							<a class="nav-link" data-toggle="tab" href="#tab-4">TPC/ PC/ OC</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#tab-5">Organizing Committee</a>
+							<a class="nav-link" data-toggle="tab" href="#tab-5">Scientific Committee</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-lg-9 mt-4 mt-lg-0">
-					<div class="tab-content">
+					<div class="tab-content" >
 						<div class="tab-pane" id="tab-3">
 							<div class="row">
 								<div class="col-lg-7 details order-2 order-lg-1">
 									<h3>Steering Committee</h3>
 
 									<ul class="list-unstyled text-left d-inline-block ">
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Chai Wutiwiwatchai, NECTEC,
-											Thailand</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Bin Ma, Institute for Infocomm
-											Research, Singapore</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Hsin-Min Wang, IIS, Academia
-											Sinica, Taiwan</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Honorary Chair: Prof. Satoshi Nakamura</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>General Chair: Dr Amita Dev, Vice Chancellor, IGDTUW</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>General Co. Chair: Prof Anupam Shukla, Director IIIT, Pune </li>
 									</ul>
 								</div>
-								<div class="col-lg-5 text-center order-1 order-lg-2">
-									<img src="assets/images/speakers/3.JPG" alt="" height="270px" width="400px"
+								<!--//<div class="col-lg-5 text-center order-1 order-lg-2">
+									<img src="assets/images/speakers/" alt="" height="270px" width="400px"
 										style="box-shadow: 5px 10px 18px #414040;">
-								</div>
+								</div>-->
 							</div>
 						</div>
 						<div class="tab-pane" id="tab-4">
-							<div class="row">
+							<div class="row" style="flex-direction: row;">
 								<div class="col-lg-7 details order-2 order-lg-1">
 									<h3>Technical Program Committee</h3>
 
 									<ul class="list-unstyled text-left d-inline-block ">
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Chai Wutiwiwatchai, NECTEC,
-											Thailand</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Chai Wutiwiwatchai, NECTEC,
-											Thailand</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Bin Ma, Institute for Infocomm
-											Research, Singapore</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Hsin-Min Wang, IIS, Academia
-											Sinica, Taiwan</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Ashish Seth, Inha University,
-											Tashkent</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mirna Adriani, UI, Indonesia</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Deepak Garg, Bennett University,
-											India</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mani Madhukar, IBM India Pvt. Ltd
-										</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Shakir Khan, Imam University, Saudi
-											Arabia</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. P. K. Dass, IIT Guwahati, India
-										</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Omar Farooq, AMU, India</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr Shweta Bansal, KIIT, Gurgaon, India
-										</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Arun Kumar, Jubail Univ., SA</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Poonam Bansal, MSIT, Delhi</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Vinod Shukla, Amity University
-											Dubai</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Kirti Tyagi, Inha University,
-											Tashkent</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr Atul Kumar, KIIT, Gurgaon</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr Sanjay Misra, Covenant Univ.,
-											Nigeria</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Mrs. Swaran Lata, Ex-Director & Head,
-											TDIL Programme,
-											DEITY</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Sunita Arora, CDAC</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Kamini Malhotra, SAG, DRDO</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Shweta Sinha, KIIT, Gurgaon</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. A. K. Mohapatra, CTA, Delhi Police
-										</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. R. K. Singh, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Ashwni Kumar, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Prof. Deepak Garg, Bennett University
-										</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Archana Baliyan, MSIT</li>
-
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Technical Program Commitee Chair: Dr S S Agrawal</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>TPC Co. Chair: Prof. S Sakti, NAIST, Japan</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Technical Program Commitee Members: Prof. Odette *, Prof. Win Pa Pa *, Prof. Syed Hussain *</li>
 									</ul>
 
 								</div>
-								<div class="col-lg-5 text-center order-1 order-lg-2">
+
+								<div class="col-lg-7 details order-2 order-lg-1">
+									<h3>Publicity Committee</h3>
+
+									<ul class="list-unstyled text-left d-inline-block ">
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Publicity Chair: Prof. Jasdeep Kaur</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Publicity Co. Chair: Ms. Deepti Chabbra</li>
+										
+									</ul>
+
+								</div>
+
+								<div class="col-lg-7 details order-2 order-lg-1">
+									<h3>Organizing Committee</h3>
+
+									<ul class="list-unstyled text-left d-inline-block ">
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Organising Committee Chair: Prof. R K Singh</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Organising Committee Co. Chair: Prof. Arun Sharma</li>
+										
+									</ul>
+
+								</div>
+								<!--//<div class="col-lg-5 text-center order-1 order-lg-2">
 									<img src="assets/images/speakers/4(2).JPG" alt="" height="350px" width="500px"
 										style="box-shadow: 5px 10px 18px #414040;">
-								</div>
+								</div>-->
 							</div>
 						</div>
 						<div class="tab-pane" id="tab-5">
 							<div class="row">
 								<div class="col-lg-6 details order-2 order-lg-1">
-									<h3>Organizing Committee</h3>
+									<h3>Scientific Committee</h3>
 
 									<ul class="list-unstyled text-left d-inline-block ">
-										<li><i class="fa fa-chevron-circle-right mr-2"></i>Dr. Arun Sharma, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Ela Kumar, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Nidhi Goel, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Manoj Soni, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Preeti Chauhan, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Preeti Vajpeyi, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Shalini Arora, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr Jasdeep Kaur, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Vishal Rai, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Ms. Bhawna Narwal, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. N. R. Chauhan, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Vivek Chawla, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Chandra Prakash, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mohana Ghosh, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Sourabh Bharti, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Ms. Pooja Gambhir, IGDTUW</li>
-										<li><i class="fas fa-chevron-circle-right mr-2"></i>Ms. Vasundhra Gupta, IGDTUW</li>
+										<li><i class="fa fa-chevron-circle-right mr-2"></i>Dr. Alexey Karpov, SPIIRAS, Russia</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Ms Anu Khosla, SAG DRDO, India</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Anupam Shukla, IIIT-Pune, India</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Arun Kumar, IIIT-Delhi, India</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Ashish Seth, Inha Univ., Tashkent</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Ayu Purwarianti, ITB, Indonesia</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Barbara Zitova, Czech Republic</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Brian Mak, HKUST, China</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Chai Wutiwiwatchai, NECTEC, Thailand</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Charl Van Heerden, SPbSU, Russia</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Claudia Soria, ILC-CNR, Italy</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Danill Kocharov, HKUST, China</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Dirk Van Compernolle, KU, Belgium</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. E. Dupoux, EHESS-ENS, France</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Eric Castelli, MICA, Vietnam</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Etienne Barnard, NWU, South Africa</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Gerard Bailly, CNRS, France</li>
+										<li><i class="fa fa-chevron-circle-right mr-2"></i>Dr. Gilles Adda, CNRS, France</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Hiroya Fujisaki, Tokyo University</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Hsin-Min Wang, IIS, Taiwan</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Joseph Mariani, CNRS, France</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Kamini Malhotra, SAG, DRDO, India</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Karunesh Arora, CDAC, Noida, India</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Mr. Khundmir Syed, IBM (I) Pvt. Ltd.</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Mr. Kranti Athalye, IBM (I) Pvt. Ltd.</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Laurent Besacier, LIG, France</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Lori Lamel, LIMSI, France</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Luong Chi Mai, IOIT, Vietnam</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mani Madhukar, IBM (I)ndia Pvt. Ltd,</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Marelie Davel, (NWU), South Africa</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mariko Kondo, Waseda Univ., Japan</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Mirna Adriani, Univ. of Indonesia</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Ms. Mona Bharadwaj, IBM (I) Pvt. Ltd.</li>
+										<li><i class="fas fa-chevron-circle-right mr-2"></i>Dr. Nemeth Geza, BUTE, Hungary</li>
 
 									</ul>
 
 								</div>
-								<div class="col-lg-6 text-center order-1 order-lg-2">
+								<!--<div class="col-lg-6 text-center order-1 order-lg-2">
 									<img src="assets/images/speakers/2.JPG" alt="" height="400px" width="550px"
 										style="box-shadow: 5px 10px 18px #414040;">
-								</div>
+								</div>-->
 							</div>
 						</div>
 					</div>
@@ -1678,7 +1683,7 @@
 
 	<!-- End Gallery Section -->
 
-
+	<!--
 	<section id="sponsors-section" class="sponsors-section section">
 		<div class="container">
 			<br>
@@ -1699,23 +1704,23 @@
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-11.svg" alt=""></div>
 				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="assets/images/logos/logo-12.svg" alt=""></div>
 			</div>
-			<!--//row-->
-			<!-- <div class="sponsors-cta text-center pt-5"><a class="btn-primary btn btn-lg" href="#">Become A Sponsor</a></div> -->
+			<!--//row
+			<!-- <div class="sponsors-cta text-center pt-5"><a class="btn-primary btn btn-lg" href="#">Become A Sponsor</a></div> 
 		</div>
-		<!--//container-->
+		<!--//container
 	</section>
 	<!--//sponsors-section-->
 
 	<br>
 	<hr><br>
 
-	<!-- FAQ ADDED -->
+	<!-- FAQ ADDED 
 	<div class="content">
 		<h1 style="text-align: center; color: #414040;">Frequently Asked Question</h1><br>
 
-		<!-- __________________________ SECTIONS ___________________________ -->
+		<!-- __________________________ SECTIONS ___________________________ 
 
-		<!-- <h6 style="text-align: center; color: #5f5d5d;">Happy to answer all your doubts</h6> -->
+		<!-- <h6 style="text-align: center; color: #5f5d5d;">Happy to answer all your doubts</h6> 
 
 		<div>
 			<input type="checkbox" id="question1" name="q" class="questions">
@@ -1730,7 +1735,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question2" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1743,7 +1748,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question3" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1757,7 +1762,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question4" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1771,7 +1776,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question5" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1784,7 +1789,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question6" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1797,7 +1802,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question7" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1812,7 +1817,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question8" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1826,7 +1831,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question9" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1842,7 +1847,7 @@
 
 			</div>
 		</div>
-		<!-- _____________________________________________________ -->
+		<!-- _____________________________________________________ 
 		<div>
 			<input type="checkbox" id="question10" name="q" class="questions">
 			<div class="plus">+</div>
@@ -1864,7 +1869,7 @@
 	<hr>
 
 
-
+	<!--
 	<section id="contact">
 		<div class="containerr">
 			<form action="mailto:oshinsaini18092000@gmail.com" method="post" enctype="text/plain">
@@ -1882,7 +1887,7 @@
 			<option value="australia">Australia</option>
 			<option value="canada">Canada</option>
 			<option value="usa">USA</option>
-		  </select> -->
+		  </select> 
 
 				<label for="subject">Subject</label>
 				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
@@ -1894,7 +1899,7 @@
 			</form>
 		</div>
 	</section>
-
+-->
 
 	<footer class="footer py-5 theme-bg-primary">
 		<div class="container text-center">
@@ -2361,6 +2366,7 @@
 		<!--//modal-dialog-->
 	</div>
 	<!--//modal-->
+	
 
 
 
@@ -2382,7 +2388,13 @@
 	<script src="assets/plugins/back-to-top.js"></script>
 	<script src="assets/plugins/jquery.scrollTo.min.js"></script>
 	<script src="assets/js/main.js"></script>
-
+	<script src="sweetalert.min.js"></script>
+	<script type="text/javascript">
+		function myFunction(){
+			alert("COMING SOON!");
+		}
+		
+	</script>
 
 </body>
 
